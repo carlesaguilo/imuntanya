@@ -1,0 +1,198 @@
+div.wrap {
+	width:960px;
+	margin:0 auto 28px;
+	text-align:left;
+}
+#main2 div.wrap {
+	width: 715px;
+	}
+
+div#top div#nav {
+	float:left;
+	clear:both;
+	width:960px;
+	height:52px;
+	margin:22px 0 0;
+}
+#main2 div#top div#nav {
+	width: 715px;
+	}
+div#top div#nav ul {
+	float:left;
+	width:700px;
+	height:52px;
+	list-style-type:none;
+}
+
+div#nav ul li {
+	float:left;
+	height:52px;
+}
+
+div#nav ul li a {
+	border:0;
+	height:52px;
+	display:block;
+	line-height:52px;
+	text-indent:-9999px;
+}
+
+div#slideshow {
+	position: relative;
+	
+/* margin:-1px 0 0; */
+}
+
+div#video-slideshow {
+	height:300px;
+	margin:-1px 0 0;
+}
+
+div#slideshow div.wrap {
+	height:300px;
+
+	
+/* background:url(../images/slideshow-bg.png) 50% 0 no-repeat; */
+}
+
+div#slideshow div#slide-holder {
+	z-index:40;
+	width:960px;
+	height:300px;
+	position:absolute;
+}
+#main2 div#slideshow div#slide-holder,
+#main2 div#slideshow div#slide-holder div#slide-runner {
+	width: 715px;
+	}
+
+div#slideshow div#slide-holder div#slide-runner {
+	top:0;
+	left:0;
+	width:960px;
+	height:300px;
+	overflow:hidden;
+	position:absolute;
+}
+
+div#slideshow div#slide-holder img {
+	margin:0;
+	display:none;
+	position:absolute;
+    left:0;
+}
+
+div#slideshow div#slide-holder div#slide-controls { /* Portada */
+	left:0;
+	bottom:0;
+	bottom:0;
+	width:960px;
+	height:300px;
+	display:none;
+	position:absolute;
+	z-index:120;
+}
+
+#main2 div#slideshow div#slide-holder div#slide-controls { /*Interior*/
+	width:705px;
+	height:300px;
+}
+
+div#slideshow div#slide-holder div#slide-controls div.text {
+	float:left;
+	display:inline;
+}
+
+div#slideshow div#slide-holder div#slide-controls #slide-client.text {
+	font: bold 18px/1.2em Arial, sans-serif;
+	color: #8D9C01;
+	display:block;
+	float:none;
+	text-align:left;
+	padding:10px 10px 10px 24px;
+	z-index: 95;
+	width:311px;
+	position: absolute;
+	top: 80px; left: 30px;
+	background: #FFFFFF;
+	/*IE*/
+	background:none;
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCffffff,endColorstr=#CCffffff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCffffff,endColorstr=#CCffffff);
+	zoom: 1;
+	/*Back to normal*/
+	background: rgba(255,255,255, 0.80);
+}
+
+#main2 div#slideshow div#slide-holder div#slide-controls #slide-client.text {
+	background-color: transparent;
+	}
+
+div#slideshow div#slide-holder div#slide-controls #slide-desc.text {
+	font: normal 14px/1.5em Arial, sans-serif;
+	color:#333333;
+	position: absolute; left: 30px; top:122px;
+	background: rgb(255,255,255);
+	/*IE*/
+	background:none;
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCffffff,endColorstr=#CCffffff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCffffff,endColorstr=#CCffffff);
+	zoom: 1;
+	/*Back to normal*/
+	background: rgba(255,255,255, 0.80);
+	width: 325px;
+	padding: 10px 10px 20px 10px;
+	}
+#main2 div#slideshow div#slide-holder div#slide-controls #slide-desc.text {
+	background-color: transparent;
+}
+div#slide-desc.text ul {
+	list-style-image: url(../UserFiles/Image/principal/punt_verd.png);
+	margin-left: 33px;
+}
+div#slide-desc.text li {
+	padding-left: 5px;
+	}
+
+div#slideshow div#slide-holder div#slide-controls div#slide-nav {
+	position:absolute;
+	bottom:10px;
+	right:50px;
+}
+
+div#slideshow div#slide-holder div#slide-controls div#slide-nav a {
+	font:normal 12px/1em Arial;
+	color:#C9C9C9;
+	border:1px solid #C9C9C9;
+	padding:3px 4px;
+	display:inline-block;
+	text-align:center;
+	margin-left:10px;
+	cursor:pointer;
+	background-color:#ffffff;
+}
+
+div#slideshow div#slide-holder div#slide-controls div#slide-nav a.on {
+	background-color:#c9c9c9;
+	color:#333333;
+}
+
+div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
+	cursor:pointer;
+}
+
+div#slideshow div#slide-holder div#slide-controls div#slide-nav a {
+
+	
+/* background-image:url(../images/silde-nav.png); */
+}
+
+div#nav ul li a {
+
+	
+/* background:url(../images/nav.png) no-repeat; */
+}
+
+#contentarea {
+	position:relative;
+}

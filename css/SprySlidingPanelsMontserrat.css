@@ -1,0 +1,123 @@
+#newsTicker {
+	width: 750px;
+	float: left;
+	border-top: solid 1px #E4E4E4;
+	background-color: #FFFFFF;
+}
+#newsTicker .SlidingPanels {
+	width: 750px;
+	height: 171px;
+	float: left;
+}
+#newsTicker .SlidingPanelsContentGroup {
+	width: 8000em;
+	float: left;
+}
+#newsTicker .SlidingPanelsContent {
+	float: left;
+	width: 250px;
+	height: 180px;
+}
+
+#newsTicker img {
+	float: left;
+	margin-right: 4px;
+}
+
+#newsTicker .imagen {
+	float: left;
+	margin-right: 4px;
+	height:150px;
+}
+
+#newsTicker .SlidingPanelsContent .content {
+	margin: 4px auto;
+	float: left;
+}
+
+#newsTicker .content {
+	height: 135px;
+	padding: 4px 4px;
+    font-family:Arial, Helvetica, sans-serif;   
+    width:240px; 
+    font-size:12px;
+    color:#ffffff;
+}
+
+#newsTicker h2 a{
+    color:#00548B;
+    font-weight:bold;
+    font-size:16px;
+	margin-bottom:0px; 
+	padding-bottom:0px;
+	font-weight:bold;
+}
+#newsTicker h2 a:hover{
+    color:#000000;
+}
+#newsTicker p {
+	margin: 3px 3px;
+    line-height:15px;
+    font-size:12px;
+    color:#000000;
+}
+#newsTicker span {
+	padding-bottom:10px;
+	color:#0089C6;
+}
+
+#newsTicker .prev {
+	text-align: left;
+    font-size:12;
+	padding: 0px 4px;
+	clear: both;
+}
+#newsTicker .prev a{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#0089C6;
+    text-decoration:none;
+}
+#newsTicker .prev a:hover{
+    color:#000000;
+}
+
+#newsTicker .next {
+	text-align: right;
+    font-size:12px;
+	padding:  0px 4px;
+	clear: both;
+}
+#newsTicker .next a{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12;
+    color:#0089C6;
+    text-decoration:none;
+}
+#newsTicker .next a:hover{
+    color:#000000;
+}
+
+
+.SlidingPanelsAnimating * {
+	overflow: visible !important;
+}
+
+#newsTicker .navLinks {
+	clear: both;
+    text-align:center;
+	border-top:  solid 1px #E4E4E4;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom: solid 1px #E4E4E4;
+    background-color:#ffffff;
+    font-family: Arial;
+    font-size:13px;
+	color:#0089C6;
+}
+#newsTicker .navLinks a{
+    color:#0089C6;
+}
+#newsTicker .navLinks a:hover{
+    color:#000000;
+}

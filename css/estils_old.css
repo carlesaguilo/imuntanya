@@ -1,0 +1,759 @@
+@charset "UTF-8";
+/* CSS Document */
+/* !TOC */
+/****************************
+	0 - RESET
+	1 - BODY
+	2 - HEADER
+		2.1 - Idiomes
+		2.2 - Coordenades
+		2.3 - Main menu
+			2.3.1 - Segon nivell
+	3 - MAIN
+		3.1 - Inici
+		3.2 - Interiors
+			3.2.1 - Productes
+	4 - FOOTER
+		4.1 - Contactar
+		4.2 - On Som
+		4.3 - Links Socials
+		4.4 - Copyright
+	5 - LEFT
+		5.1 - Menu
+	6 - RIGHT
+		6.1 - Formulari
+		6.2 - Descarregar
+		6.1 - Formulari Gran
+*****************************/
+
+/* !COLORS */
+/* !#FFFFFF BLANC */
+/* !#8D9C01 VERD FOSC  */
+/* !#DCE2B2 VERD CLAR */
+/* !#333333 NEGRE */
+/* !#C9C9C9 GRIS FOSC */
+/* !#EDEDED GRIS CLAR */
+/* !#9C9C9C BLAU */
+
+
+/*****************************/
+/* !0 - RESET */
+	html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, img, strong, tt, var, dl, dt, dd, ol, ul, li,  form, label, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+	color: #333333;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	:focus {
+		outline: 0;
+	}
+	ins {
+		text-decoration: none;
+	}
+	del {
+		text-decoration: line-through;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	a {
+		text-decoration: none;
+	}
+	/* Les classes que serveixen per fer trampes */
+	.aclarir { /* Trenca els floats*/
+		clear: both;
+		display: block;
+		height: 1px;
+		margin-bottom: -1px;
+		font-size: 1px;
+	}
+	.amagar { /*Amagar del navegador pero no dels buscadors */
+		position: absolute;
+		left: -10000px;
+	}
+	acronym {
+		cursor: help;
+		border-bottom: 1px dotted #333333;
+		}
+
+/*****************************/
+/* !1 - BODY */
+	body {
+		background: #FFFFFF;
+		font: normal 14px/1.5em Arial, sans-serif;
+		color: #333333;
+		text-align: center;
+	}
+	#all {
+		width: 960px;
+		margin: 0 auto;
+		text-align: left;
+	}
+	
+/*****************************/
+/* !2 - HEADER */
+	#header {
+		height: 150px;
+		padding: 13px 10px 20px 10px;
+		border-bottom: 1px solid #C9C9C9;
+		position: relative;
+		z-index: 200;
+	}
+	.logo {
+		position: absolute;
+		left: 10px; top: 23px;
+		z-index: 19;
+	}
+	.logo .slogan {
+		font: normal 12px/1.1em Arial, sans-serif;
+		color: #9c9c9c;
+		margin-top: -7px
+	}
+/* !2.1 - Idiomes */
+	.idiomes {
+		float: right;
+		display: block;
+	}
+	.idiomes li {
+		float: left;
+		display: block;
+		margin-left: 6px;
+	}
+	.idiomes img {
+		border: 2px solid #ffffff;
+	}
+	.idiomes .current img,
+	.idiomes a:hover img {
+		border: 2px solid #DCE2B2;
+	}
+/* !2.2 - Coordenades */
+	.coordenades {
+		float: right;
+		clear: right;
+		color: #9c9c9c;
+		margin-top: 20px;
+	}
+	.coordenades p {
+		float: left;
+		padding: 3px 0 3px 25px;
+		margin-left: 25px;
+		background: url(/templates/imuntanya/UserFiles/Image/principal/icones.png) no-repeat 0 0 transparent;
+	}
+	.coordenades .emilio {
+		font: bold 12px/1.2em Arial, sans-serif;
+		background-position: left 3px;
+	}
+	.coordenades .telf {
+		font: bold 14px/1.2em Arial, sans-serif;
+		background-position: 0 -25px;
+	}
+	.coordenades a {
+		color: #9c9c9c;
+	}
+	.coordenades a:hover {
+		text-decoration: underline;
+		color: #8D9C01;
+	}
+/* !2.3 - Main menu */
+	#main_menu {
+		float: right;
+		clear: right;
+		color: #333333;
+		font: bold 14px/1.3em Arial, sans-serif;
+		margin-top: 50px;
+		z-index: 220;
+	}
+	#main_menu > li {
+		float: left;
+		margin-left: 30px;
+		z-index: 230;
+	}
+	#main_menu > li a {
+		color: #333333;
+		padding: 5px 14px 0px 0px;
+		display: block;
+	}
+	#main_menu > li span {
+		display: block;
+		padding-bottom: 8px;
+	}
+	#main_menu > li a:hover span,
+	#main_menu > li#current > a span {
+		color: #8D9C01;
+		border-bottom: 2px solid #8D9C01;
+		}
+	#main_menu > li.parent a:hover span {
+		border-bottom: none;
+		}
+	#main_menu > li.parent > a {
+		background: url(/templates/imuntanya/UserFiles/Image/principal/icones.png) no-repeat right -236px;
+	}
+	#main_menu > li.parent > a:hover {
+		background-position: right -188px;
+	}
+	#main_menu li.mnRRHH a {
+		color: #FFFFFF;
+		background-color: #8D9C01;
+		padding: 5px 7px 0 7px;
+		-moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px;
+	}
+	#main_menu li.mnRRHH a:hover {
+		background-color: #333333;
+		}
+	#main_menu li.mnRRHH a:hover span {
+		border-bottom: 0px;
+		color: #ffffff;
+		}
+/* 2.3.1 - Segon nivell	 */
+	#main_menu .parent ul {
+		position: absolute;
+		left: -10000px;
+		background: #ffffff;
+		box-shadow: 2px 2px 3px #333333;
+		width: 200px;
+		color: #9c9c9c;
+		z-index: 999;
+	}
+	#main_menu .parent ul ul {
+		box-shadow: 0px 0px 0px transparent;
+	}
+	#main_menu .parent ul ul {
+		position: relative;
+	}
+	#main_menu li:hover ul,
+	#main_menu li.sfhover ul {
+		left: auto;
+	}
+	#main_menu .parent li {
+		font: bold 12px/1.2em Arial, sans-serif;
+		border-bottom: 2px solid #ededed;
+		float: none;
+	}
+	#main_menu .parent ul li a {
+		padding: 0px;
+	}
+	#main_menu .parent ul span {
+		padding: 7px 5px 5px 10px;
+		background-color: #8D9C01;
+		color: #FFFFFF;
+		display: block;
+		letter-spacing: 1px;
+		}
+	#main_menu .parent ul a span {
+		color: #333333;
+		background-color: #FFFFFF;
+		letter-spacing: 0px;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition:  all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	#main_menu .parent ul a:hover span {
+		background-color: #DCE2B2;
+		border: none;
+	}
+	#main_menu .parent ul ul a span {
+		padding-left: 20px;
+	}
+
+/*****************************/
+/* !3 - MAIN */
+	#main {
+		margin-top: 30px;
+		position: relative;
+	}
+/* !3.1 - Inici */
+	.titolHome {
+		font: bold 28px/1.5em Arial, sans-serif;
+		color: #8D9C01;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.pestanya {
+		float: left;
+		width: 310px;
+		margin-left: 15px;
+		font: normal 14px/1.4em Arial, sans-serif;
+		text-align: justify;
+	}
+	.pestanya.quiSom {
+		margin-left: 0px;
+	}
+	.pestanya h2 {
+		background-color: #EDEDED;
+		color: #333333;
+		text-transform: uppercase;
+		font: bold 22px/1.1em Arial, sans-serif;
+		padding: 85px 10px 10px 10px;
+		margin-bottom: 10px;
+	}
+	.pestanya p {
+		margin-bottom: 1em;
+	}
+	.pestanya .readMore {
+		font: bold 12px/1.3em Arial, sans-serif;
+		text-align: right;
+		margin-left: 20px;
+	}
+	.pestanya .readMore a,
+	.pestanya .totesNoticies a,
+	.pestanya.Noticies .titolNoticia a {
+		color: #8D9C01;
+	}
+	.pestanya .readMore a:hover,
+	.pestanya .totesNoticies a:hover,
+	.pestanya.Noticies .titolNoticia a:hover {
+		text-decoration: underline;
+		color: #9C9C9C;
+	}
+	.pestanya.Noticies {
+		position: relative;
+		z-index: 10;
+	}
+	.pestanya .totesNoticies {
+		position: absolute;
+		z-index: 20; right: 5px; top: 5px;
+		font: bold 12px/1.3em Arial, sans-serif;
+	}
+	.pestanya.Noticies .titolNoticia {
+		font: bold 18px/1.2em Arial, sans-serif;
+	}
+	.pestanya.Noticies .dataNoticia {
+		color: #9c9c9c;
+		text-align: right;
+		font: bold 12px/1.2em Arial, sans-serif;
+	}
+	.pestanya.Noticies .imatgeNoticia {
+		border: 1px solid #ededed;
+		display: block;
+		width: 298px; height:118px;
+		overflow: hidden;
+	}
+	.pestanya.Noticies .imatgeNoticia img {
+		width: 298px; height: auto;
+	}
+/* 3.2 - Interiors */
+	#main2 {
+		float: left;
+		width: 715px;
+	}
+	#texte {
+		color: #333333;
+		width: 445px;
+		float: left;
+		margin-right: 45px; 
+	}
+	#texte h2 {
+		font: bold 18px/1.5em Arial;
+		margin: 1.5em 0 .5em 0;
+	}
+	#texte p {
+		font: normal 14px/1.5em Arial;
+		margin-bottom: .5em;
+	}
+/* 3.2.1 - Productes */
+	#galeria {
+		background-color: #ededed;
+		border: 1px solid #c9c9c9;
+		padding: 10px;
+		margin-bottom: 20px;
+		height: 130px; width: 693px;
+	}
+	#galeria h3 {
+		color: #8D9C01;
+		font: bold 14px Arial;
+		margin-bottom: 10px;
+	}
+	.slides_container {
+    	width: 693px;
+        height: 86px;
+    }
+    .slides_container div {
+     	width: 693px;
+        height: 86px;
+        display:block;
+    }
+	#galeria div div a {
+		display: block;
+		float: left;
+		margin-left: 8px;
+		width: 130px; height: 86px;
+		overflow: hidden;
+		border: 1px solid #c9c9c9;
+			}
+	#galeria div div a:first-child {
+		margin-left: 0px;
+	}
+	#galeria  #slide-runner a img {
+		width: 130px; height: auto;
+	}
+	#galeria .pagination {
+		width: 100%;
+		text-align: center;
+		font: normal 12px/1em Arial;
+		padding-top: 10px;
+	}
+	#galeria .pagination li {
+		display: inline;
+		margin: 0 4px;
+	}
+	#galeria .pagination li a {
+		color: #c9c9c9;
+	}
+	#galeria .pagination li.current a {
+		color: #333333;
+	}
+
+/*****************************/
+/* !4 - FOOTER */
+	#footer {
+		clear: both;
+		background-color: #ededed;
+		margin-top: 60px;
+		padding: 20px;
+	}
+	#footer h3 {
+		font: bold 14px/1.2em Arial, sans-serif;
+		text-transform: uppercase;
+		color: #333333;	
+		margin-bottom: 20px;
+	}
+/* 4.1 - Contactar */
+	#footer .contactar {
+		width: 215px;
+		float: left;
+		margin-right: 80px;
+	}
+	#footer .quadreContacte {
+		padding: 0px 5px 10px 25px;
+		font: normal 12px/1.4em Arial, sans-serif;
+		border-bottom: 1px solid #c9c9c9;
+		margin-bottom: 30px;
+		background: url(/templates/imuntanya/UserFiles/Image/principal/icones.png) no-repeat -20px -84px transparent;
+	}
+	#footer .quadreContacte.quadreEmilio {
+		background-position: -20px -285px;
+	}
+	#footer .quadreContacte.quadreEmilio a {
+		color: #8D9C01;
+		font-weight: bold;
+	}
+	#footer .quadreContacte.quadreEmilio a:hover {
+		color: #9C9C9C;
+		text-decoration: underline;
+		}
+/* !4.2 - On Som */
+	#footer .onSom {
+		float: left;
+	}
+	#footer .onSom iframe {
+		margin-left: 20px;
+		width: 276px; height: 174px;
+		border: 1px solid #C9C9C9; padding: 1px;
+	}
+/* !4.3 - Links Socials */
+	#footer .terceraPestanya {
+		float: left;
+		margin-left: 25px;
+		width: 235px;
+		font: bold 12px/1.4em Arial, sans-serif;
+		text-align: left;
+	}
+	#footer .terceraPestanya a {
+		color: #333333;
+	}
+	#footer .terceraPestanya a:hover {
+		text-decoration: underline;
+		color: #9C9C9C;
+	}
+	#footer .terceraPestanya ul {
+		margin-left: 12px;
+	}
+	#footer .terceraPestanya li {
+		padding: 5px 5px 5px 30px;
+		border-bottom: 1px solid #c9c9c9;
+		margin-bottom: 20px;
+		}
+	#footer .linksSocials li {
+		background: url(/templates/imuntanya/UserFiles/Image/principal/icones.png) no-repeat -19px -380px transparent;
+	}
+	#footer .linksSocials li.linkedin {
+		background-position: -19px -329px;
+	}
+	#footer .linksSocials li.instagram {
+		background-position: -19px -437px;
+	}
+/* !4.4 - Copyright */
+	#footer .copyright {
+		font: normal 12px/1.4em Arial, sans-serif;
+		clear: both;
+		margin-top: 20px;
+	}
+	#footer .copyright strong {
+		color: #8D9C01;
+	}
+	
+/*****************************/
+/* !5 - LEFT */
+	#left {
+		float: left;
+		width: 205px;
+		margin-right: 40px;
+	}
+	#left h3 {
+		color: #ffffff; background-color: #8D9C01;
+		text-align: left;
+		padding: 48px 10px 8px 10px;
+		font: bold 18px/1.1em Arial;
+		margin-bottom: 10px;
+	}
+/* !5.1 - Menu */
+	#left .menu {
+		color: #333333;
+		
+	}
+	#left .menu li.parent span {
+		text-transform: uppercase;
+		background-color: #DCE2B2;
+		padding: 6px 10px 4px 10px;
+		margin-bottom: 5px;
+		display: block;
+		font: bold 14px/1.2em Arial;
+	}
+	#left .menu li.parent li a {
+		text-transform: none;
+		margin-bottom: 5px;
+		display: block;
+		color: #333333;
+		background-color: #ededed;
+		padding: 1px 10px 0 20px;
+		font: normal 12px/1.5em Arial;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition:  all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	#left .menu li.parent li.active a,
+	#left .menu li.parent li a:hover {
+		color: #ffffff;
+		background-color: #333333;
+	}
+	
+/*****************************/
+/* !6 - RIGHT */
+	#right {
+		width: 225px;
+		float: left;
+	}
+/* !6.1 - Formulari */
+	#formInfo {
+	    width: 220px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+	#formInfo,
+	#formInfo input {
+		border: 1px solid #c9c9c9;
+	}
+	#formInfo h3 {
+		color: #ffffff;
+		background-color: #333333;
+		font: bold 16px/1.5em Arial;
+		padding: 8px 10px 3px 10px;
+		letter-spacing: 1px;
+		margin-bottom: 10px;
+	}
+	#formInfo label,
+	#formInfo input {
+		display: block;
+		margin-left: 10px;
+		font: bold 12px/1.5em Arial;
+	}
+	#formInfo TEXTAREA {
+		display: block;
+		margin-left: 10px;
+		font: bold 12px/1.5em Arial;
+		border: 1px solid #c9c9c9;
+	}	
+	#formInfo label {
+		text-transform: lowercase;
+	}
+	#formInfo input {
+		width: 195px;
+		margin-bottom: 10px;
+		padding: 3px 2px;
+		font-weight: normal;
+	}
+	#formInfo .obligatori {
+		color: red;
+	}
+	#formInfo select {
+		margin: 0px 10px;
+		width: 200px;
+		border: 1px solid #c9c9c9;
+		padding: 2px 3px;
+		height: 27px;
+		font-size: 12px;
+		background-color: transparent;		
+	}
+	#formInfo button {
+		color: #ffffff;
+		border: 1px solid #8D9C01;
+		background-color: #8D9C01;
+		font: bold 14px/1.0em Arial;
+		text-transform: lowercase;
+		width: 77px; height: 30px;
+		float: right;
+		margin-top: 35px; margin-right: 10px;
+		cursor: pointer;
+	}
+	#formInfo button:hover {
+		-webkit-transition: background-color 0.2s ease-in-out;
+		-moz-transition:  background-color 0.2s ease-in-out;
+		-o-transition: background-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out;
+		background-color: #DCE2B2;
+		color: #333333;
+	}
+
+/* 6.2 - Descarregar */
+	#boxInfoPdf,
+	#boxInfoVideo {
+		margin-bottom: 20px;
+	}
+	
+	
+/* !6.3 - Formulari gran */
+	#formInfoGran {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		width: 400px;
+	}
+	#formInfoGran,
+	#formInfoGran input {
+		border: 1px solid #c9c9c9;
+	}
+	#formInfoGran h3 {
+		color: #ffffff;
+		background-color: #333333;
+		font: bold 16px/1.5em Arial;
+		padding: 8px 10px 3px 10px;
+		letter-spacing: 1px;
+		margin-bottom: 10px;
+	}
+	#formInfoGran label,
+	#formInfoGran input {
+		display: block;
+		margin-left: 10px;
+		font: bold 12px/1.5em Arial;
+	}
+	#formInfoGran label {
+		text-transform: lowercase;
+	}
+	#formInfoGran input {
+		width: 375px;
+		margin-bottom: 10px;
+		padding: 3px 2px;
+		font-weight: normal;
+	}
+	#formInfoGran TEXTAREA {
+	    border: 1px solid #c9c9c9;
+		display: block;
+		margin-left: 10px;
+		font: bold 12px/1.5em Arial;	
+		width: 375px;
+		margin-bottom: 10px;
+		padding: 3px 2px;
+		font-weight: normal;
+	}
+	#formInfoGran .obligatori {
+		color: red;
+	}
+	#formInfoGran select {
+		margin: 0px 10px;
+		width: 200px;
+		border: 1px solid #c9c9c9;
+		padding: 2px 3px;
+		height: 27px;
+		font-size: 12px;
+		background-color: transparent;		
+	}
+	#formInfoGran button {
+		color: #ffffff;
+		border: 1px solid #8D9C01;
+		background-color: #8D9C01;
+		font: bold 14px/1.0em Arial;
+		text-transform: lowercase;
+		width: 77px; height: 30px;
+		float: right;
+		margin-top: 35px; margin-right: 10px;
+		cursor: pointer;
+	}
+	#formInfoGran button:hover {
+		-webkit-transition: background-color 0.2s ease-in-out;
+		-moz-transition:  background-color 0.2s ease-in-out;
+		-o-transition: background-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out;
+		background-color: #DCE2B2;
+		color: #333333;
+	}
+	
+/* !4.2 - Contacte */
+	#contacte .mapes {
+		float: left;
+		margin-right:20px;
+		color: #333333;
+		font: 14px/1.5em Arial;
+	}
+	#contacte .mapes iframe {
+		margin-left: 20px;
+		width: 276px; height: 174px;
+		border: 1px solid #C9C9C9; padding: 1px;
+	}	
+	#contacte .linkEsquerra {
+		float:left; 
+		width:190px; 
+		background-color:#EDEDED; 
+		padding:6px; 
+		font-family:Arial, Helvetica, sans-serif; 
+		color:#333333; 
+		font-size:14px; 
+		font-weight:bold; 
+	}	
+	#contacte .linkDreta {
+		float:left; 
+		width:240px; 
+		padding:6px; 
+		margin-left:20px; 
+		font-family:Arial, Helvetica, sans-serif; 
+		color:#8D9C01; 
+		font-size:14px; 
+		font-weight:bold;
+	}	
+	#contacte .linkDreta a{
+		color:#8D9C01; 
+		text-decoration:none;
+	}	
+	#contacte .linkDreta a:hover{
+		text-decoration:underline;
+	}	
+	#contacte .linkSeparador {
+		clear:both;
+	}	
+
+	

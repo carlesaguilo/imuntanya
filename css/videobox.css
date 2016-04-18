@@ -1,0 +1,74 @@
+body {margin: 0;}
+#vb_lbOverlay {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	cursor: pointer;
+}
+
+#vb_lbCenter, #vb_lbBottomContainer {
+	position: absolute;
+	left: 50%;
+	overflow: hidden;
+	background-color: #fff; text-align: center; padding: 5px;
+}
+
+.lbLoading {
+	background: #fff url(images/loading.gif) no-repeat center;
+}
+
+#vb_lbImage {
+	border: 10px solid #fff;
+}
+
+#vb_lbPrevLink, #vb_lbNextLink {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 50%;
+	outline: none;
+}
+
+#vb_lbPrevLink {
+	left: 0;
+}
+
+#vb_lbPrevLink:hover {
+	background: transparent url(images/prevlabel.gif) no-repeat 0% 15%;
+}
+
+#vb_lbNextLink {
+	right: 0;
+}
+
+#vb_lbNextLink:hover {
+	background: transparent url(images/nextlabel.gif) no-repeat 100% 15%;
+}
+
+#vb_lbBottom {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666;
+	line-height: 1.4em;
+	text-align: left;
+	border: 5px solid #fff;
+	border-top-style: none;
+}
+
+#vb_lbCloseLink {
+	display: block;
+	float: right;
+	width: 66px;
+	height: 22px;
+	background: transparent url(images/closelabel.gif) no-repeat center;
+	margin: 5px 0;
+}
+
+#vb_lbCaption, #vb_lbNumber {
+	margin-right: 71px;
+}
+
+#vb_lbCaption {
+	font-weight: bold;
+}

@@ -1,0 +1,98 @@
+div.wrap{
+width:510px;
+margin:0 auto;
+text-align:left;
+}
+div#top div#nav{
+float:left;
+clear:both;
+width:510px;
+height:52px;
+margin:22px 0 0;
+background:url url(../images/nav-bg.png) 0 0 no-repeat;
+}
+div#top div#nav ul{
+float:left;
+width:511px;
+height:52px;
+list-style-type:none;
+}
+div#nav ul li{
+float:left;
+height:52px;
+}
+div#nav ul li a{
+border:0;
+height:52px;
+display:block;
+line-height:52px;
+text-indent:-9999px;
+}
+div#slideshow{
+
+/* margin:-1px 0 0; */
+}
+div#video-slideshow{
+height:683px;
+margin:-1px 0 0;
+}
+div#slideshow div.wrap{
+height:287px;
+background:url(../images/slideshow-bg.png) 50% 0 no-repeat;
+}
+div#slideshow div#slide-holder{
+z-index:40;
+width:510px;
+height:287px;
+position:absolute;
+}
+div#slideshow div#slide-holder div#slide-runner{
+top:0px;left:0px;
+width:510px;
+height:287px;
+overflow:hidden;
+position:absolute;
+}
+div#slideshow div#slide-holder img{
+margin:0;
+display:none;
+position:absolute;
+}
+div#slideshow div#slide-holder div#slide-controls{
+left:0;
+bottom:0px;
+width:510px;
+height:80px;
+display:none;
+position:absolute;
+z-index: 20;
+}
+div#slideshow div#slide-holder div#slide-controls p.text{
+float:left;
+display:inline;
+}
+div#slideshow div#slide-holder div#slide-controls p#slide-client.text {
+	font-size: 42px; font-weight: bold; color: #9fceee; margin-top: 13px; margin-right: 160px; line-height: 1em; display: block; float: none; text-align: right;
+	}
+div#slideshow div#slide-holder div#slide-controls p#slide-desc.text {
+	font-size: 14px; font-weight: normal; color: #FFFFFF; margin-right: 160px; margin-top: 3px; line-height: 1em; display: block; float: none;text-align: right;
+	}
+div#slideshow div#slide-holder div#slide-controls p#slide-nav{
+	position: absolute; bottom: 0px; right: 35px; width: 250px; height: 25px; 
+}
+div#slideshow div#slide-holder div#slide-controls p#slide-nav a{
+	font: normal 12px/1em Arial; color: #FFFFFF; border-bottom: 5px solid #FFFFFF; padding-bottom: 8px; display: block; float: left; width: 10px; text-align: center; margin-left: 10px; cursor: pointer;
+}
+div#slideshow div#slide-holder div#slide-controls p#slide-nav a.on{
+	color: #9fceee; border-bottom-color: #9fceee; 
+}
+div#slideshow div#slide-holder div#slide-controls p#slide-nav a:hover {
+	cursor: pointer;
+	}
+div#slideshow div#slide-holder div#slide-controls p#slide-nav a{/* background-image:url(../images/silde-nav.png); */}
+div#nav ul li a{/* background:url(../images/nav.png) no-repeat; */}
+#contentarea {
+	position: relative;
+	}
+#tapa {
+	position: absolute; width: 510px; height: 287px; background: url(/templates/montserrat/UserFiles/Image/principal/fondo-imatges-unitat-mama.png) no-repeat transparent; top: 0px; left: 0px; z-index: 10;}

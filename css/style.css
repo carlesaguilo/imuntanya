@@ -1,0 +1,96 @@
+#sitemap {width:965px; padding-left:0px; text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333;}
+#sitemap h1{padding-top:15px; padding-bottom:15px;margin:0px; font-weight: bold; font-family:Arial, Helvetica, sans-serif; font-size:18px; text-transform: uppercase;}
+#sitemap h2{padding:0px; margin:0px; font-weight: bold; font-family:Arial, Helvetica, sans-serif; font-size:16px; text-transform: uppercase;}
+#sitemap .boxalignleft{border:1px solid #C4C3C3; color:#504F4F; text-align:justify; padding:10px; font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+#sitemap li{padding-left:20px; padding-top:10px; list-style-image:url(../UserFiles/Image/principal/punt_verd.png)  }
+#sitemap a {text-decoration:underline; color:#333333;}
+#sitemap a:hover {text-decoration:underline; color:#000000;}
+
+#error { background-color:#ffffff; padding-left:30px; text-align:justify; width:100%; padding-right:30px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333;}
+#error a{text-decoration:none; color:#333333;}
+#error a:hover{ text-decoration:underline;}
+#error .disculpa{ padding-bottom:20px; padding-top:20px; font-weight:bold; font-size:13px;}
+
+#migas {font-size:12px;  padding-bottom:8px; padding-top:10px; margin-left: 10px;}
+#migas a, #migas span{ text-decoration:none; color:#8D9C01;}
+#migas strong { font-weight: bold; color: #333333;}
+#migas a:hover{ text-decoration:underline;}
+
+#bodyPrincipal {text-align:left;}
+#bodyPrincipal h1{color:#8D9C01; padding-bottom:15px; font: bold 30px/1.2em Arial;}
+#bodyPrincipal h3{color:#333333; padding:7px; font: bold 13px/1.2em Arial; background-color:#EDEDED; margin-bottom:10px;}
+#bodyPrincipal .menuEsquerra{float:left; width:716px; text-align:justify; padding-right: 10px;}
+#bodyPrincipal .menuEsquerra h1{color:#333333;}
+#bodyPrincipal .menuDreta{float:left; padding-left:10px;}
+#bodyPrincipal .titolArxius{color:#333333; font: bold 18px/1.2em Arial;}
+#bodyPrincipal .titolData{background-color:#EDEDED; padding-left:8px; padding-top:2px; padding-bottom:2px; font-style:italic; font-weight:bold;}
+#bodyPrincipal .menuEsquerraContact{float:left; width:520px; text-align:justify; padding-right: 10px;}
+#bodyPrincipal .menuEsquerraContact h1{color:#333333;}
+#bodyPrincipal .menuDretaContact{float:left; padding-left:10px;}
+#bodyPrincipal .caixaimage { float:left; padding-left:8px; padding-top:10px;}
+#bodyPrincipal .image {position: relative; width: 230px; border:1px solid #C4C3C3;}
+#bodyPrincipal .image h4 {position: absolute; top: 145px; left: 0; width: 100%; height: 16px;}
+#bodyPrincipal .image h4 span {display:block; text-align:center; height: 16px; color: white; font: bold 14px/15px Arial; letter-spacing: 0px; background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5); padding: 10px;}
+
+#boxInfo{border:1px solid #C4C3C3; line-height:17px; width:200px; color:#504F4F; text-align:justify; padding:10px; font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+#boxInfo h2{line-height:24px; font-size:18px;}
+
+#boxInfoPdf{border:1px solid #C4C3C3; line-height:17px; width:200px; color:#504F4F; text-align:justify; background-color:#EDEDED; padding:10px; font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+#main2 #boxInfoPdf, #main2 #boxInfoVideo { width: 203px;}
+#boxInfoPdf h2{line-height:24px; font-size:14px; padding-bottom:10px;}
+#boxInfoPdf .descarrega{border-bottom:1px solid #C4C3C3; font-size:12px; padding-bottom:15px; padding-top:15px; background-image:url(../UserFiles/Image/iconos/icono-pdf.png); background-repeat:no-repeat; background-position:right}
+#boxInfoPdf a:last-child .descarrega { border-bottom: 0 none;}
+#boxInfoPdf a{ text-decoration:none; color:#504F4F; font-weight:bold}
+#boxInfoPdf a:hover{ text-decoration:underline;}
+
+#boxInfoVideo{border:1px solid #C4C3C3; line-height:17px; width:200px; color:#504F4F; text-align:justify; background-color:#EDEDED; padding:10px; font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+#boxInfoVideo h2{line-height:24px; font-size:14px; padding-bottom:10px;}
+#boxInfoVideo .descarrega{ font-size:12px; padding-bottom:15px; padding-top:15px; background-image:url(../UserFiles/Image/iconos/icono-tv.png); background-repeat:no-repeat; background-position:right}
+#boxInfoVideo a:last-child .descarrega { border-bottom: 0 none;}
+#boxInfoVideo a{ text-decoration:none; color:#504F4F; font-weight:bold}
+#boxInfoVideo a:hover{ text-decoration:underline;}
+
+#webcreator {font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#465419; padding-top:10px;}
+#webcreator a{color:#465419; text-decoration:none}
+#webcreator a:hover{text-decoration:underline;}
+
+#llistaNoticies{padding-top:10px; width:220px;}
+#llistaNoticies .dataNoticia {color:#9C9C9C;  font-weight:bold; font-size:14px; border-top:1px solid #C4C3C3; width:220px;}
+#llistaNoticies h3{color:#95AA27;  font-weight:bold; font-size:16px;}
+#llistaNoticies h3 a{ text-decoration:none; color:#95AA27; font-weight:bold}
+#llistaNoticies h3 a:hover{ text-decoration:underline;}
+#llistaNoticies span{font-size:12px; color:#333333;}
+
+
+.verif{ display: none; }
+
+#map1 {width:240px; height:220px;}
+
+#map2 {width:240px; height:220px;}
+
+.localizacionDireccionGoogleMap {font-size:9px;}
+
+#answercontact {font-family:Arial; font-size:14px; padding-left:10px; padding-bottom:400px; width: 400px;}
+#answercontact h2{line-height:22px; margin:0PX; padding-top:20PX; padding-bottom:4PX; padding-left:0PX; padding-right:0PX; color:#000000; font-size:20px; font-weight:bold; text-align:left}
+
+#answercontact2 {font-family:Arial; font-size:14px; padding-left:10px; padding-bottom:400px; width: 200px;}
+#answercontact2 h2{line-height:22px; margin:0PX; padding-top:20PX; padding-bottom:4PX; padding-left:0PX; padding-right:0PX; color:#000000; font-size:20px; font-weight:bold; text-align:left}
+
+#video {width:688px; float:left;}
+#video  h1 {font-size:20px; padding-bottom:10px;}
+#video  h2 { font-size:19px; padding-bottom:0px; }
+#video  h3 {padding-top:10px; font-size:15px; }
+#video .texto{padding-top:20PX; font-size:13PX; color:#303030; padding-right:30px;}
+#video ul{padding-left:20PX; padding-top:10PX;}
+#video li{list-style-image:url(/templates/montserrat/UserFiles/Image/principal/punt_blau.png); padding-bottom:8PX;}
+#video p { line-height:20px; width:680px; }
+
+#menuVideos {float:left; width:200px; padding-top:40px; margin-left:25px;}
+#menuVideos  h2 { font-size:16px; padding-bottom:10px; }
+#menuVideos .primerespai{border-bottom:1px solid #E4E4E4; margin-bottom:4px;}
+#menuVideos .video{border-bottom:1px solid #E4E4E4; padding-bottom:14px; margin-top:12px;}
+#menuVideos img {float:left; margin-right:5px;}
+#menuVideos h3 {margin-top:0px; padding-top:0px; font-size:13px; color:#8D9C01; font-weight:bold; line-height:15px;}
+#menuVideos h3 a{ text-decoration:none; color:#8D9C01;}
+#menuVideos h3 a:hover{ color:#000000;}
+#menuVideos p {font-size:12px; color:#303030;}
