@@ -28,12 +28,12 @@
 
 /* !COLORS */
 /* !#FFFFFF BLANC */
-/* !#8D9C01 VERD FOSC  */
-/* !#DCE2B2 VERD CLAR */
-/* !#333333 NEGRE */
-/* !#C9C9C9 GRIS FOSC */
-/* !#EDEDED GRIS CLAR */
-/* !#9C9C9C BLAU */
+/* !$colVerdFosc VERD FOSC  */
+/* !$colVerdClar VERD CLAR */
+/* !$colNegre NEGRE */
+/* !$colGrisFosc GRIS FOSC */
+/* !$colGrisClar GRIS CLAR */
+/* !$colBlau BLAU */
 
 
 /*****************************/
@@ -45,7 +45,7 @@
 	outline: 0;
 	vertical-align: baseline;
 	background: transparent;
-	color: #333333;
+	color: $colNegre;
 	}
 	ol, ul {
 		list-style: none;
@@ -83,7 +83,7 @@
 	}
 	acronym {
 		cursor: help;
-		border-bottom: 1px dotted #333333;
+		border-bottom: 1px dotted $colNegre;
 		}
 
 /*****************************/
@@ -91,7 +91,7 @@
 	body {
 		background: #FFFFFF;
 		font: normal 14px/1.5em Arial, sans-serif;
-		color: #333333;
+		color: $colNegre;
 		text-align: center;
 	}
 	#all {
@@ -105,7 +105,7 @@
 	#header {
 		height: 150px;
 		padding: 13px 10px 20px 10px;
-		border-bottom: 1px solid #C9C9C9;
+		border-bottom: 1px solid $colGrisFosc;
 		position: relative;
 		z-index: 200;
 	}
@@ -134,7 +134,7 @@
 	}
 	.idiomes .current img,
 	.idiomes a:hover img {
-		border: 2px solid #DCE2B2;
+		border: 2px solid $colVerdClar;
 	}
 /* !2.2 - Coordenades */
 	.coordenades {
@@ -162,13 +162,13 @@
 	}
 	.coordenades a:hover {
 		text-decoration: underline;
-		color: #8D9C01;
+		color: $colVerdFosc;
 	}
 /* !2.3 - Main menu */
 	#main_menu {
 		float: right;
 		clear: right;
-		color: #333333;
+		color: $colNegre;
 		font: bold 14px/1.3em Arial, sans-serif;
 		margin-top: 50px;
 		z-index: 220;
@@ -180,7 +180,7 @@
 		z-index: 230;
 	}
 	#main_menu > li a {
-		color: #333333;
+		color: $colNegre;
 		padding: 5px 14px 0px 0px;
 		display: block;
 	}
@@ -190,8 +190,8 @@
 	}
 	#main_menu > li a:hover span,
 	#main_menu > li#current > a span {
-		color: #8D9C01;
-		border-bottom: 2px solid #8D9C01;
+		color: $colVerdFosc;
+		border-bottom: 2px solid $colVerdFosc;
 		}
 	#main_menu > li.parent a:hover span {
 		border-bottom: none;
@@ -204,12 +204,12 @@
 	}
 	#main_menu li.mnRRHH a {
 		color: #FFFFFF;
-		background-color: #8D9C01;
+		background-color: $colVerdFosc;
 		padding: 5px 7px 0 7px;
 		-moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px;
 	}
 	#main_menu li.mnRRHH a:hover {
-		background-color: #333333;
+		background-color: $colNegre;
 		}
 	#main_menu li.mnRRHH a:hover span {
 		border-bottom: 0px;
@@ -220,7 +220,7 @@
 		position: absolute;
 		left: -10000px;
 		/*background: #ffffff;*/
-		/*box-shadow: 2px 2px 3px #333333;*/
+		/*box-shadow: 2px 2px 3px $colNegre;*/
 		width: 390px;
 		color: #9c9c9c;
 		z-index: 999;
@@ -249,13 +249,13 @@
 	}
 	#main_menu .parent ul span {
 		padding: 7px 5px 5px 10px;
-		background-color: #8D9C01;
+		background-color: $colVerdFosc;
 		color: #FFFFFF;
 		display: block;
 		letter-spacing: 1px;
 		}
 	#main_menu .parent ul a span {
-		color: #333333;
+		color: $colNegre;
 		background-color: #FFFFFF;
 		letter-spacing: 0px;
 		-webkit-transition: all 0.2s ease-in-out;
@@ -265,7 +265,7 @@
 		transition: all 0.2s ease-in-out;
 	}
 	#main_menu .parent ul a:hover span {
-		background-color: #DCE2B2;
+		background-color: $colVerdClar;
 		border: none;
 	}
 	#main_menu .parent ul ul a span {
@@ -299,8 +299,8 @@
 		margin-left: 0px;
 	}
 	.pestanya h2 {
-		background-color: #EDEDED;
-		color: #333333;
+		background-color: $colGrisClar;
+		color: $colNegre;
 		text-transform: uppercase;
 		font: bold 22px/1.1em Arial, sans-serif;
 		padding: 85px 10px 10px 10px;
@@ -317,13 +317,13 @@
 	.pestanya .readMore a,
 	.pestanya .totesNoticies a,
 	.pestanya.Noticies .titolNoticia a {
-		color: #8D9C01;
+		color: $colVerdFosc;
 	}
 	.pestanya .readMore a:hover,
 	.pestanya .totesNoticies a:hover,
 	.pestanya.Noticies .titolNoticia a:hover {
 		text-decoration: underline;
-		color: #9C9C9C;
+		color: $colBlau;
 	}
 	.pestanya.Noticies {
 		position: relative;
@@ -357,7 +357,7 @@
 		width: 715px;
 	}
 	#texte {
-		color: #333333;
+		color: $colNegre;
 		width: 445px;
 		float: left;
 		margin-right: 45px;
@@ -394,7 +394,7 @@
 		height: 155px; width: 693px;
 	}
 	#galeria h3 {
-		color: #8D9C01;
+		color: $colVerdFosc;
 		font: bold 14px Arial;
 		margin-bottom: 10px;
 	}
@@ -440,7 +440,7 @@
 		color: #c9c9c9;
 	}
 	#galeria .pagination li.current a {
-		color: #333333;
+		color: $colNegre;
 	}
 
 
@@ -453,7 +453,7 @@
 		height: 188px; width: 693px;
 	}
 	#galeria2 h3 {
-		color: #8D9C01;
+		color: $colVerdFosc;
 		font: bold 14px Arial;
 		margin-bottom: 10px;
 	}
@@ -481,7 +481,7 @@
 		font: normal 12px/1em Arial;
 		padding-top: 0px;
 		height: 15px;
-		background-color: #333333;
+		background-color: $colNegre;
 	}
 	#galeria2 .pagination li {
 		display: inline;
@@ -491,7 +491,7 @@
 		color: #c9c9c9;
 	}
 	#galeria2 .pagination li.current a {
-		color: #333333;
+		color: $colNegre;
 	}
 
 
@@ -506,7 +506,7 @@
 	#footer h3 {
 		font: bold 14px/1.2em Arial, sans-serif;
 		text-transform: uppercase;
-		color: #333333;	
+		color: $colNegre;	
 		margin-bottom: 20px;
 	}
 /* 4.1 - Contactar */
@@ -526,11 +526,11 @@
 		background-position: -20px -285px;
 	}
 	#footer .quadreContacte.quadreEmilio a {
-		color: #8D9C01;
+		color: $colVerdFosc;
 		font-weight: bold;
 	}
 	#footer .quadreContacte.quadreEmilio a:hover {
-		color: #9C9C9C;
+		color: $colBlau;
 		text-decoration: underline;
 		}
 /* !4.2 - On Som */
@@ -540,7 +540,7 @@
 	#footer .onSom iframe {
 		margin-left: 20px;
 		width: 276px; height: 174px;
-		border: 1px solid #C9C9C9; padding: 1px;
+		border: 1px solid $colGrisFosc; padding: 1px;
 	}
 /* !4.3 - Links Socials */
 	#footer .terceraPestanya {
@@ -551,11 +551,11 @@
 		text-align: left;
 	}
 	#footer .terceraPestanya a {
-		color: #333333;
+		color: $colNegre;
 	}
 	#footer .terceraPestanya a:hover {
 		text-decoration: underline;
-		color: #9C9C9C;
+		color: $colBlau;
 	}
 	#footer .terceraPestanya ul {
 		margin-left: 12px;
@@ -581,7 +581,7 @@
 		margin-top: 20px;
 	}
 	#footer .copyright strong {
-		color: #8D9C01;
+		color: $colVerdFosc;
 	}
 	
 /*****************************/
@@ -592,7 +592,7 @@
 		margin-right: 40px;
 	}
 	#left h3 {
-		color: #ffffff; background-color: #8D9C01;
+		color: #ffffff; background-color: $colVerdFosc;
 		text-align: left;
 		padding: 48px 10px 8px 10px;
 		font: bold 18px/1.1em Arial;
@@ -600,12 +600,12 @@
 	}
 /* !5.1 - Menu */
 	#left .menu {
-		color: #333333;
+		color: $colNegre;
 		
 	}
 	#left .menu li.parent span {
 		text-transform: uppercase;
-		background-color: #DCE2B2;
+		background-color: $colVerdClar;
 		padding: 6px 10px 4px 10px;
 		margin-bottom: 5px;
 		display: block;
@@ -615,7 +615,7 @@
 		text-transform: none;
 		margin-bottom: 5px;
 		display: block;
-		color: #333333;
+		color: $colNegre;
 		background-color: #ededed;
 		padding: 1px 10px 0 20px;
 		font: normal 12px/1.5em Arial;
@@ -628,7 +628,7 @@
 	#left .menu li.parent li.active a,
 	#left .menu li.parent li a:hover {
 		color: #ffffff;
-		background-color: #333333;
+		background-color: $colNegre;
 	}
 	
 /*****************************/
@@ -648,7 +648,7 @@
 	}
 	#formInfo h3 {
 		color: #ffffff;
-		background-color: #333333;
+		background-color: $colNegre;
 		font: bold 16px/1.5em Arial;
 		padding: 8px 10px 3px 10px;
 		letter-spacing: 1px;
@@ -683,8 +683,8 @@
 	}
 	#formInfo button {
 		color: #ffffff;
-		border: 1px solid #8D9C01;
-		background-color: #8D9C01;
+		border: 1px solid $colVerdFosc;
+		background-color: $colVerdFosc;
 		font: bold 14px/1.0em Arial;
 		text-transform: lowercase;
 		width: 77px; height: 30px;
@@ -698,8 +698,8 @@
 		-o-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #DCE2B2;
-		color: #333333;
+		background-color: $colVerdClar;
+		color: $colNegre;
 	}
 
 /* 6.2 - Descarregar */
@@ -721,7 +721,7 @@
 	}
 	#formInfoGran h3 {
 		color: #ffffff;
-		background-color: #333333;
+		background-color: $colNegre;
 		font: bold 16px/1.5em Arial;
 		padding: 8px 10px 3px 10px;
 		letter-spacing: 1px;
@@ -766,8 +766,8 @@
 	}
 	#formInfoGran button {
 		color: #ffffff;
-		border: 1px solid #8D9C01;
-		background-color: #8D9C01;
+		border: 1px solid $colVerdFosc;
+		background-color: $colVerdFosc;
 		font: bold 14px/1.0em Arial;
 		text-transform: lowercase;
 		width: 77px; height: 30px;
@@ -781,8 +781,8 @@
 		-o-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #DCE2B2;
-		color: #333333;
+		background-color: $colVerdClar;
+		color: $colNegre;
 	}
 
 	#formSendPdf {	}
@@ -803,8 +803,8 @@
 	}
 	#formSendPdf button {
 		color: #ffffff;
-		border: 1px solid #8D9C01;
-		background-color: #8D9C01;
+		border: 1px solid $colVerdFosc;
+		background-color: $colVerdFosc;
 		font: bold 11px/1.0em Arial;
 		text-transform: lowercase;
 		width: 77px; height: 24px;
@@ -818,8 +818,8 @@
 		-o-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #DCE2B2;
-		color: #333333;
+		background-color: $colVerdClar;
+		color: $colNegre;
 	}
 
 
@@ -827,21 +827,21 @@
 	#contacte .mapes {
 		float: left;
 		margin-right:20px;
-		color: #333333;
+		color: $colNegre;
 		font: 14px/1.5em Arial;
 	}
 	#contacte .mapes iframe {
 		margin-left: 20px;
 		width: 276px; height: 174px;
-		border: 1px solid #C9C9C9; padding: 1px;
+		border: 1px solid $colGrisFosc; padding: 1px;
 	}	
 	#contacte .linkEsquerra {
 		float:left; 
 		width:190px; 
-		background-color:#EDEDED; 
+		background-color:$colGrisClar; 
 		padding:6px; 
 		font-family:Arial, Helvetica, sans-serif; 
-		color:#333333; 
+		color:$colNegre; 
 		font-size:14px; 
 		font-weight:bold; 
 	}	
@@ -851,12 +851,12 @@
 		padding:6px; 
 		margin-left:20px; 
 		font-family:Arial, Helvetica, sans-serif; 
-		color:#8D9C01; 
+		color:$colVerdFosc; 
 		font-size:14px; 
 		font-weight:bold;
 	}	
 	#contacte .linkDreta a{
-		color:#8D9C01; 
+		color:$colVerdFosc; 
 		text-decoration:none;
 	}	
 	#contacte .linkDreta a:hover{

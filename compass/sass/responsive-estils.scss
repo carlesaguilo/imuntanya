@@ -1,0 +1,406 @@
+/* SASS Document */
+/* !TOC */
+/****************************
+	0 - RESET
+	1 - BODY
+	2 - HEADER
+		2.1 - Idiomes
+		2.2 - Coordenades
+		2.3 - Main menu
+			2.3.1 - Segon nivell
+	3 - MAIN
+		3.1 - Inici
+		3.2 - Interiors
+			3.2.1 - Productes
+	4 - FOOTER
+		4.1 - Contactar
+		4.2 - On Som
+		4.3 - Links Socials
+		4.4 - Copyright
+	5 - LEFT
+		5.1 - Menu
+	6 - RIGHT
+		6.1 - Formulari
+		6.2 - Descarregar
+		6.1 - Formulari Gran
+*****************************/
+
+/* !COLORS */
+/* !#8D9C01 VERD FOSC  */
+/* !#DCE2B2 VERD CLAR */
+/* !#333333 NEGRE */
+/* !#C9C9C9 GRIS FOSC */
+/* !#EDEDED GRIS CLAR */
+/* !#9C9C9C BLAU */
+
+
+/*****************************/
+	
+
+ 	@import "compass/reset";
+	@import "compass/css3";
+	
+/* !VARIABLES */
+	$fontText: Arial, sans-serif;;
+	$strIcones: url('/templates/imuntanya/UserFiles/Image/principal/icones.png');
+	
+//  !Z-INDEX
+	$zmodal: 9000;
+	$zoverlay: 8000;
+	$zdropdown: 7000;
+	$zflat: 1;
+
+//  !FONTS	
+	$fNormal: 400;
+	$fBold: 700;
+	
+// !COLORS
+	$colBlanc: #FFFFFF;
+	$colVerdFosc: #8D9C01;
+	$colVerdClar: #DCE2B2;
+	$colNegre: #333333;
+	$colGrisFosc: #C9C9C9;
+	$colGrisClar: #EDEDED;
+	$colTaca: #9C9C9C;
+
+/* !MIXINS  */
+	// Recalcular la mida de la lletra en rems i px
+	@mixin tipoMida($sizeValue) {
+	  font-size: ($sizeValue * 10) + px;
+	  font-size: $sizeValue + rem;
+	}
+	// Definir el tipus de Lletra
+	@mixin lletra($pes:400, $mida: 1.6, $linea: 1.5em) {
+		font-weight: $pes;
+		@include tipoMida($mida);
+		line-height: $linea;
+		font-family: $fontText;		
+		font-style: normal;
+	}
+	// Modificar aspecte en funcio de l'amplada
+	@mixin breakpoint($point) {
+		@if $point == pMin {
+	    	@media only screen and (max-width: (768 / 16) * 1em) { @content; }
+		}
+		@else if $point == p480 {
+	    	@media only screen and (min-width: (480 / 16) * 1em) { @content; }
+		}
+		@else if $point == p600 {
+	    	@media only screen and (min-width: (600 / 16) * 1em) { @content; }
+		}
+		@else if $point == p768 {
+	    	@media only screen and (min-width: (768 / 16) * 1em) { @content; }
+		}
+		@else if $point == p980 {
+	    	@media only screen and (min-width: (980 / 16) * 1em)  { @content; }
+		}
+		@else if $point == p1200 {
+	    	@media only screen and (min-width: (1200 / 16) * 1em)  { @content; }
+		}
+	}
+	// Moure el fons per als Hover
+	@mixin moureFons ($posX, $posY) {
+		& > a {
+			background: $strIcones no-repeat $posX $posY transparent;
+			&:hover {
+				background-position: ($posX - 280px) $posY;
+			}
+		}
+	}
+	@mixin moureFonsMenu ($posX, $posY, $backColor) {
+		@include moureFons ($posX, $posY);
+		& > a {
+			@include transition (background-color .25s ease-in);
+			background-color: $backColor;
+			&:hover {				
+				background-color: lighten($backColor, 20%);
+				color: $colNegre;
+			}
+		}
+	}
+	
+		
+	// Amplia el height per encavir tots els floats
+	.aclarir {
+		&:before,
+		&:after {
+			content:"";
+			display:table;
+		}
+		&:after {
+			clear: both;
+		}
+		zoom:1;/* For IE 6/7 (trigger hasLayout) */
+	}
+	
+	/*Amagar del navegador pero no dels buscadors */
+	.amagar { 
+		position: absolute;
+		left: -10000px;
+		height: 1px;
+		overflow: hidden;
+	}
+	
+	// La caixa per defecte
+	.container {
+		@extend .aclarir;
+		width: 95%;
+		margin: 0 auto;
+		// 700px
+		@include breakpoint (p768) {
+			width: 768px;
+			margin: 0 auto;
+		}
+		// 980px
+		@include breakpoint (p980) {
+			width: 960px;
+		}
+		// 1200 pixels
+		@include breakpoint (p1200) {
+			width: 1070px;
+		}
+	}
+	// centrar absolutament
+	.centrar {
+		// 700px
+		@include breakpoint (p768) {
+			position: absolute;
+			width: 768px;
+			margin: 0;
+			left: 50%; margin-left: -1 * (768px / 2);
+			right: auto;
+		}
+		// 980px
+		@include breakpoint (p980) {
+			width: 960px;
+			margin: 0;
+			left: 50%; margin-left: -1 * (960px / 2);
+			right: auto;
+		}
+	}
+		
+/*---------------------------------------------- */
+/* !1 - BODY */
+	html {
+		font-size: 62.5%;
+	}
+	body {
+		@include lletra(normal, 1.4, 1.5em);
+		background: $colBlanc;
+		color: $colNegre;
+		text-align: center;
+	}
+	#all {
+		@extend .container;
+		text-align: left;
+	}
+/*---------------------------------------------- */
+
+/*---------------------------------------------- */
+/* !2 - HEADER */
+	#header {
+		padding: 13px 10px 20px 10px;
+		border-bottom: 1px solid $colGrisFosc;
+		position: relative;
+		z-index: 200;
+		
+		// 768 pixels
+		@include breakpoint (p768) {
+			height: 150px;		
+		}
+	}
+	.logo {
+		z-index: 19;
+		a {
+			display: block;
+		}
+		img {
+			width: 300px; height: auto;
+			max-width: 100%;
+		}
+		.slogan {
+			@include lletra (normal, 1.4, 1.1em);
+			color: $colTaca;
+			letter-spacing: 1px;
+		}
+		
+		// 768 pixels
+		@include breakpoint (p768) {
+			position: absolute;
+			left: 10px; top: 23px;		
+		}
+	}
+// !2.1 - Idiomes
+	.idiomes {
+		@include lletra(normal, 1.4, 1em);
+		@extend .aclarir;
+		display: block;
+		margin-top: 13px;
+		text-align: center;
+		li {
+			@include inline-block();
+			margin-left: 6px;
+		}
+		img {
+			border: 2px solid $colBlanc;
+		}
+		a {
+			@include transition (background-color .25s ease-in);
+			color: $colBlanc; background-color: $colVerdFosc;
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			padding: 2px 5px;
+			&:hover {
+				background-color: $colGrisFosc;
+			}
+		}
+		.current {
+			a {
+				background-color: $colGrisFosc;
+			}
+		}
+		
+		// 768 pixels
+		@include breakpoint (p768) {
+			@include lletra(normal, 1, 1em);
+			float: right;
+		}		
+	}
+// !2.2 - Coordenades
+	.coordenades {
+		color: $colTaca;
+		margin-top: 20px;
+		p {
+			
+			padding: 3px 0 3px 25px;
+			margin-left: 25px;
+			background: $strIcones no-repeat 0 0 transparent;
+		}
+		a {
+			@include transition(color .25s ease-in);
+			text-decoration: none;
+			color: $colTaca;
+			&:hover {
+				text-decoration: underline;
+				color: $colVerdFosc;
+			}
+		}
+		.emilio {
+			@include lletra(bold, 1.2, 1.2em);
+			background-position: left 3px;
+		}
+		.telf {
+			@include lletra(bold, 1.4, 1.2em);
+			background-position: 0 -25px;
+		}
+		
+		// 768 pixels
+		@include breakpoint (p768) {
+			float: right;
+			clear: right;
+			p {
+				float: left;
+			}
+		}
+	}
+// !2.3 - Main menu
+	#main_menu {
+		@include lletra (bold, 1.4, 1.3em);
+		color: $colNegre;
+		margin-top: 50px;
+		z-index: 220;
+		width: auto;
+		& > li {
+			margin-left: 30px;
+			z-index: 230;
+			a {
+				color: $colNegre;
+				padding: 5px 14px 0px 0px;
+				display: block;
+				text-decoration: none;
+				&:hover span {
+					color: $colVerdFosc;
+					border-bottom: 2px solid $colVerdFosc;
+				}
+			}
+			span {
+				display: block;
+				padding-bottom: 8px;
+			}
+			&#current > a span {
+				color: $colVerdFosc;
+				border-bottom: 2px solid $colVerdFosc;
+			}
+			&.parent a {
+				&:hover {
+					span {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+		li.mnRRHH {
+			a {
+				@include border-radius(3px);
+				color: $colBlanc;
+				background-color: $colVerdFosc;
+				padding: 5px 7px 0 7px;
+				&:hover {
+					background-color: $colNegre;
+					span {
+						border-bottom: 0px;
+						color: $colBlanc;
+					}
+				}
+			}
+		}
+		
+		// 768 pixels
+		@include breakpoint (p768) {
+			float: right;
+			clear: right;	
+			& > li {
+				float: left;
+				&.parent a {
+					background: $strIcones no-repeat right -236px;
+					&:hover {
+						background-position: right -188px;
+						span {
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+
+// !2.3.1 - Segon nivell
+/*---------------------------------------------- */
+
+/*---------------------------------------------- */
+/* !3 - MAIN */
+// !3.1 - Inici
+// !3.2 - Interiors
+// !3.2.1 - Productes
+/*---------------------------------------------- */
+
+/*---------------------------------------------- */
+/* !4 - FOOTER */
+// !4.1 - Contactar
+// !4.2 - On Som
+// !4.3 - Links Socials
+// !4.4 - Copyright
+/*---------------------------------------------- */
+
+/*---------------------------------------------- */
+/* !5 - LEFT */
+// !5.1 - Menu
+/*---------------------------------------------- */
+
+/*---------------------------------------------- */
+/* !6 - RIGHT */
+// !6.1 - Formulari
+// !6.2 - Descarregar
+// !6.1 - Formulari Gran

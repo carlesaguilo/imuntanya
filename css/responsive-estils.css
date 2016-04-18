@@ -1,0 +1,462 @@
+/* SASS Document */
+/* !TOC */
+/****************************
+	0 - RESET
+	1 - BODY
+	2 - HEADER
+		2.1 - Idiomes
+		2.2 - Coordenades
+		2.3 - Main menu
+			2.3.1 - Segon nivell
+	3 - MAIN
+		3.1 - Inici
+		3.2 - Interiors
+			3.2.1 - Productes
+	4 - FOOTER
+		4.1 - Contactar
+		4.2 - On Som
+		4.3 - Links Socials
+		4.4 - Copyright
+	5 - LEFT
+		5.1 - Menu
+	6 - RIGHT
+		6.1 - Formulari
+		6.2 - Descarregar
+		6.1 - Formulari Gran
+*****************************/
+/* !COLORS */
+/* !#8D9C01 VERD FOSC  */
+/* !#DCE2B2 VERD CLAR */
+/* !#333333 NEGRE */
+/* !#C9C9C9 GRIS FOSC */
+/* !#EDEDED GRIS CLAR */
+/* !#9C9C9C BLAU */
+/*****************************/
+/* line 5, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* !VARIABLES */
+/* !MIXINS  */
+/* line 124, ../compass/sass/responsive-estils.scss */
+.aclarir, .container, #all, .idiomes {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+/* line 125, ../compass/sass/responsive-estils.scss */
+.aclarir:before, .container:before, #all:before, .idiomes:before, .aclarir:after, .container:after, #all:after, .idiomes:after {
+  content: "";
+  display: table;
+}
+/* line 130, ../compass/sass/responsive-estils.scss */
+.aclarir:after, .container:after, #all:after, .idiomes:after {
+  clear: both;
+}
+
+/*Amagar del navegador pero no dels buscadors */
+/* line 137, ../compass/sass/responsive-estils.scss */
+.amagar {
+  position: absolute;
+  left: -10000px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* line 145, ../compass/sass/responsive-estils.scss */
+.container, #all {
+  width: 95%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 48em) {
+  /* line 145, ../compass/sass/responsive-estils.scss */
+  .container, #all {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 145, ../compass/sass/responsive-estils.scss */
+  .container, #all {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 75em) {
+  /* line 145, ../compass/sass/responsive-estils.scss */
+  .container, #all {
+    width: 1070px;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 164, ../compass/sass/responsive-estils.scss */
+  .centrar {
+    position: absolute;
+    width: 768px;
+    margin: 0;
+    left: 50%;
+    margin-left: -384px;
+    right: auto;
+  }
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 164, ../compass/sass/responsive-estils.scss */
+  .centrar {
+    width: 960px;
+    margin: 0;
+    left: 50%;
+    margin-left: -480px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------- */
+/* !1 - BODY */
+/* line 184, ../compass/sass/responsive-estils.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 187, ../compass/sass/responsive-estils.scss */
+body {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  background: #FFFFFF;
+  color: #333333;
+  text-align: center;
+}
+
+/* line 193, ../compass/sass/responsive-estils.scss */
+#all {
+  text-align: left;
+}
+
+/*---------------------------------------------- */
+/*---------------------------------------------- */
+/* !2 - HEADER */
+/* line 201, ../compass/sass/responsive-estils.scss */
+#header {
+  padding: 13px 10px 20px 10px;
+  border-bottom: 1px solid #C9C9C9;
+  position: relative;
+  z-index: 200;
+}
+@media only screen and (min-width: 48em) {
+  /* line 201, ../compass/sass/responsive-estils.scss */
+  #header {
+    height: 150px;
+  }
+}
+
+/* line 212, ../compass/sass/responsive-estils.scss */
+.logo {
+  z-index: 19;
+}
+/* line 214, ../compass/sass/responsive-estils.scss */
+.logo a {
+  display: block;
+}
+/* line 217, ../compass/sass/responsive-estils.scss */
+.logo img {
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+}
+/* line 221, ../compass/sass/responsive-estils.scss */
+.logo .slogan {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.1em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  color: #9C9C9C;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 212, ../compass/sass/responsive-estils.scss */
+  .logo {
+    position: absolute;
+    left: 10px;
+    top: 23px;
+  }
+}
+
+/* line 234, ../compass/sass/responsive-estils.scss */
+.idiomes {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  display: block;
+  margin-top: 13px;
+  text-align: center;
+}
+/* line 240, ../compass/sass/responsive-estils.scss */
+.idiomes li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-left: 6px;
+}
+/* line 244, ../compass/sass/responsive-estils.scss */
+.idiomes img {
+  border: 2px solid #FFFFFF;
+}
+/* line 247, ../compass/sass/responsive-estils.scss */
+.idiomes a {
+  -moz-transition: background-color 0.25s ease-in;
+  -o-transition: background-color 0.25s ease-in;
+  -webkit-transition: background-color 0.25s ease-in;
+  transition: background-color 0.25s ease-in;
+  color: #FFFFFF;
+  background-color: #8D9C01;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 2px 5px;
+}
+/* line 254, ../compass/sass/responsive-estils.scss */
+.idiomes a:hover {
+  background-color: #C9C9C9;
+}
+/* line 259, ../compass/sass/responsive-estils.scss */
+.idiomes .current a {
+  background-color: #C9C9C9;
+}
+@media only screen and (min-width: 48em) {
+  /* line 234, ../compass/sass/responsive-estils.scss */
+  .idiomes {
+    font-weight: normal;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 1em;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    float: right;
+  }
+}
+
+/* line 271, ../compass/sass/responsive-estils.scss */
+.coordenades {
+  color: #9C9C9C;
+  margin-top: 20px;
+}
+/* line 274, ../compass/sass/responsive-estils.scss */
+.coordenades p {
+  padding: 3px 0 3px 25px;
+  margin-left: 25px;
+  background: url("/templates/imuntanya/UserFiles/Image/principal/icones.png") no-repeat 0 0 transparent;
+}
+/* line 280, ../compass/sass/responsive-estils.scss */
+.coordenades a {
+  -moz-transition: color 0.25s ease-in;
+  -o-transition: color 0.25s ease-in;
+  -webkit-transition: color 0.25s ease-in;
+  transition: color 0.25s ease-in;
+  text-decoration: none;
+  color: #9C9C9C;
+}
+/* line 284, ../compass/sass/responsive-estils.scss */
+.coordenades a:hover {
+  text-decoration: underline;
+  color: #8D9C01;
+}
+/* line 289, ../compass/sass/responsive-estils.scss */
+.coordenades .emilio {
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.2em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  background-position: left 3px;
+}
+/* line 293, ../compass/sass/responsive-estils.scss */
+.coordenades .telf {
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  background-position: 0 -25px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 271, ../compass/sass/responsive-estils.scss */
+  .coordenades {
+    float: right;
+    clear: right;
+  }
+  /* line 302, ../compass/sass/responsive-estils.scss */
+  .coordenades p {
+    float: left;
+  }
+}
+
+/* line 308, ../compass/sass/responsive-estils.scss */
+#main_menu {
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.3em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  color: #333333;
+  margin-top: 50px;
+  z-index: 220;
+  width: auto;
+}
+/* line 314, ../compass/sass/responsive-estils.scss */
+#main_menu > li {
+  margin-left: 30px;
+  z-index: 230;
+}
+/* line 317, ../compass/sass/responsive-estils.scss */
+#main_menu > li a {
+  color: #333333;
+  padding: 5px 14px 0px 0px;
+  display: block;
+  text-decoration: none;
+}
+/* line 322, ../compass/sass/responsive-estils.scss */
+#main_menu > li a:hover span {
+  color: #8D9C01;
+  border-bottom: 2px solid #8D9C01;
+}
+/* line 327, ../compass/sass/responsive-estils.scss */
+#main_menu > li span {
+  display: block;
+  padding-bottom: 8px;
+}
+/* line 331, ../compass/sass/responsive-estils.scss */
+#main_menu > li#current > a span {
+  color: #8D9C01;
+  border-bottom: 2px solid #8D9C01;
+}
+/* line 337, ../compass/sass/responsive-estils.scss */
+#main_menu > li.parent a:hover span {
+  border-bottom: none;
+}
+/* line 344, ../compass/sass/responsive-estils.scss */
+#main_menu li.mnRRHH a {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #FFFFFF;
+  background-color: #8D9C01;
+  padding: 5px 7px 0 7px;
+}
+/* line 349, ../compass/sass/responsive-estils.scss */
+#main_menu li.mnRRHH a:hover {
+  background-color: #333333;
+}
+/* line 351, ../compass/sass/responsive-estils.scss */
+#main_menu li.mnRRHH a:hover span {
+  border-bottom: 0px;
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 48em) {
+  /* line 308, ../compass/sass/responsive-estils.scss */
+  #main_menu {
+    float: right;
+    clear: right;
+  }
+  /* line 363, ../compass/sass/responsive-estils.scss */
+  #main_menu > li {
+    float: left;
+  }
+  /* line 365, ../compass/sass/responsive-estils.scss */
+  #main_menu > li.parent a {
+    background: url("/templates/imuntanya/UserFiles/Image/principal/icones.png") no-repeat right -236px;
+  }
+  /* line 367, ../compass/sass/responsive-estils.scss */
+  #main_menu > li.parent a:hover {
+    background-position: right -188px;
+  }
+  /* line 369, ../compass/sass/responsive-estils.scss */
+  #main_menu > li.parent a:hover span {
+    border-bottom: none;
+  }
+}
+
+/*---------------------------------------------- */
+/*---------------------------------------------- */
+/* !3 - MAIN */
+/*---------------------------------------------- */
+/*---------------------------------------------- */
+/* !4 - FOOTER */
+/*---------------------------------------------- */
+/*---------------------------------------------- */
+/* !5 - LEFT */
+/*---------------------------------------------- */
+/*---------------------------------------------- */
+/* !6 - RIGHT */
