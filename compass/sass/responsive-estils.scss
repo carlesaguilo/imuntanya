@@ -30,8 +30,8 @@
 /* !#8D9C01 VERD FOSC  */
 /* !#DCE2B2 VERD CLAR */
 /* !#333333 NEGRE */
-/* !#C9C9C9 GRIS FOSC */
-/* !#EDEDED GRIS CLAR */
+/* !$colGrisFosc GRIS FOSC */
+/* !$colGrisClar GRIS CLAR */
 /* !#9C9C9C BLAU */
 
 
@@ -62,6 +62,7 @@
 	$colNegre: #333333;
 	$colGrisFosc: #C9C9C9;
 	$colGrisClar: #EDEDED;
+	$colGrisLletra: #504F4F;
 	$colTaca: #9C9C9C;
 
 /* !MIXINS  */
@@ -214,6 +215,7 @@
 	}
 	.logo {
 		z-index: 19;
+		margin-top: 23px;
 		a {
 			display: block;
 		}
@@ -232,10 +234,15 @@
 			padding: 13px 10px 20px 10px;
 			position: absolute;
 			left: 10px; top: 0px;		
+			margin-top: 0;
+			img {
+				width: 354px; height: 66px;
+				max-width: none;
+			}
 		}
 		// 980 pixels
 		@include breakpoint (p980) {
-			// top: 23px;
+			// 
 		}
 		
 	}
@@ -404,6 +411,7 @@
 		li.mnRRHH {
 			a {
 				@include border-radius(3px);
+				@include transition (all .25s ease-in);
 				color: $colBlanc;
 				background-color: $colVerdFosc;
 				padding: 5px 7px 0 7px;
@@ -526,7 +534,7 @@
 		text-transform: uppercase;
 		position: absolute; top: 15px; left: 10px; z-index: 100;
 		text-align: left;
-		text-shadow: 1px 1px 4px #000000;
+		text-shadow: 1px 1px 4px $colNegre;
 		
 		// 768 pixels
 		@include breakpoint (p768) {
@@ -602,7 +610,7 @@
 				text-align: right;
 			}
 			.imatgeNoticia {
-				border: 1px solid #ededed;
+				border: 1px solid $colGrisClar;
 				display: block;
 							}
 		}
@@ -845,8 +853,8 @@
 	
 	div#slideshow div#slide-holder div#slide-controls div#slide-nav a {
 		font:normal 12px/1em Arial;
-		color:#C9C9C9;
-		border:1px solid #C9C9C9;
+		color:$colGrisFosc;
+		border:1px solid $colGrisFosc;
 		padding:3px 4px;
 		display:inline-block;
 		text-align:center;
@@ -856,7 +864,7 @@
 	}
 	
 	div#slideshow div#slide-holder div#slide-controls div#slide-nav a.on {
-		background-color:#c9c9c9;
+		background-color:$colGrisFosc;
 		color:#333333;
 	}
 	
@@ -867,14 +875,309 @@
 		position:relative;
 	}
 // !3.2 - Interiors
+	#texte {
+		color: $colNegre;
+		text-align: left;
+		h2 {
+			@include lletra (bold, 1.8, 1.5em);
+			margin: 1.5em 0 .5em 0;
+		}
+		p, ul, ol {
+			@include lletra (normal, 1.4, 1.5em);
+			margin-bottom: .5em;
+		}
+		ul {
+			margin-left: 2em;
+			list-style-image: url(../UserFiles/Image/principal/punt_verd7.png);
+		}
+		ul ul {
+			list-style-image: url(../UserFiles/Image/principal/guionet.png);
+		}
+		li {
+			margin-bottom: .5em;
+		}
+	}
+	#video p {
+		text-align: justify;
+	}
+	// 768 pixels
+	@include breakpoint (p768) {
+		#main2 {
+			float: left;
+			width: (715px / 960px) * 100%;
+		}		
+		#texte {
+			width: (445px / 960px) * 100%;
+			float: left;
+			margin-right: (45px / 960px) * 100%;
+		}	
+	}
+	#bodyPrincipal {
+		@extend .container;
+		text-align:left;
+		h1 {
+			@include lletra(bold, 3, 1.2em);
+			color: $colVerdFosc;
+			padding-bottom:15px;
+		}
+		h2 {
+			@include lletra(bold, 2.1, 1.2em);
+			color: $colNegre;
+		}
+		h3 {
+			@include lletra(bold, 1.3, 1.2em);
+			color: $colNegre;
+			padding:7px;
+			background-color: $colGrisClar;
+			margin-bottom:10px;
+		}
+		.menuEsquerra {
+			text-align:left;
+			h1 {
+				color: $colNegre;
+			}
+		}
+		.menuDreta {
+			max-width: 480px;
+			margin: 2em auto 0 auto;
+		}
+		.titolArxius {
+			@include lletra(bold, 1.8, 1.2em);
+			color:$colNegre;
+		}
+		.titolData {
+			background-color:$colGrisClar;
+			padding-left:8px;
+			padding-top:2px;
+			padding-bottom:2px;
+			font-style:italic;
+			font-weight:bold;
+		}
+		.menuEsquerraContact {
+			text-align: left;
+			padding-right:10px;
+			h1 {
+				color: $colNegre;
+			}
+		}
+		.image {
+			position:relative;
+			border:1px solid $colGrisFosc;
+			h4 {
+				position:absolute;
+				top:145px;
+				left:0;
+				width:100%;
+				height:16px;
+				span {
+					@include lletra(bold, 1.4, 1.1em);
+					display:block;
+					text-align:center;
+					height:16px;
+					color:#fff;
+					letter-spacing:0;
+					background: $colNegre;
+					background:rgba($colNegre,0.5);
+					padding:10px;
+				}
+			}
+		}		
+		// 768 pixels
+		@include breakpoint (p768) {
+			@include box-sizing(border-box);
+			padding: 0 10px;
+			.menuEsquerra {
+				float:left;
+				width:66%;
+				text-align:justify;			
+				margin-right: 3%;
+			}
+			.menuDreta {
+				float:left;
+				width:100% - 69%;
+				margin: 0;
+				max-width: none;
+			}
+			.menuEsquerraContact {
+				float:left;
+				width:520px;
+				text-align:justify;
+				padding-right:10px;
+			}
+			.caixaimage {
+				float:left;
+				padding-left:(8px / 960px ) * 100%;
+				padding-top:10px;
+			}
+			.menuDretaContact {
+				float:left;
+				padding-left:(10px / 960px ) * 100%;
+			}
+			.image {
+				width:(230px/ 960px ) * 100%;
+			}
+		}
+		// 980 pixels
+		@include breakpoint (p980) {
+			padding: 0;
+			.menuEsquerra {
+				width:(716px / 960px) * 100%;
+				margin-right: (20px / 960px ) * 100%;
+			}
+			.menuDreta {
+				width: (224px / 960px ) * 100%;
+			}	
+		}
+		
+	}
+	#migas {
+		font-size:12px; font-size: 1.2rem;
+		padding-bottom:8px;
+		padding-top:10px;
+		margin-left:10px;
+		a, span {
+			text-decoration:none;
+			color:$colVerdFosc;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		strong {
+			font-weight: bold;
+			color: $colNegre;
+		}
+	}
+	
+	
 // !3.2.1 - Productes
+
+/* 3.2.1 - Productes */
+	#galeria {
+		background-color: $colGrisClar;
+		border: 1px solid $colGrisFosc;
+		padding: 10px;
+		margin-bottom: 20px;
+		height: 155px;
+		h3 {
+			@include lletra(bold, 1.4, 1.2em);
+			color: $colVerdFosc;
+			margin-bottom: 10px;
+		}
+		a {
+			img {
+				height: 86px; width: auto; 
+				display: inline;
+				border: 1px solid $colGrisFosc;
+			}
+		}
+		div div a {
+			@include inline-block();
+			margin-left: 8px;
+			width: auto; height: 88px;
+			overflow: hidden;
+			text-align: center;
+			&:first-child {
+				margin-left: 0px;
+			}
+		}
+		.pagination {
+			@include lletra (normal, 1.2,1.2em);
+			width: 100%;
+			text-align: center;
+			padding-top: 10px;
+			li {
+				display: inline;
+				margin: 0 4px;
+				a {
+					color: $colGrisFosc;
+				}
+				&.current a {
+					color: $colNegre;
+				}
+			}
+
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			width: (693 / 960) * 100%;		
+		}
+		
+	}
+	.slides_container {
+    	width: 693px;
+        height: 88px;
+         div {
+	     	width: 693px;
+	        height: 88px;
+	        display:block;
+	        text-align: center;
+			}
+    }
+	#galeria2 {
+		background-color: $colGrisClar;
+		border: 1px solid $colGrisFosc;
+		padding: 10px;
+		margin-bottom: 20px;
+		height: 188px;
+		h3 {
+			@include lletra (bold, 1.4,1.2em);
+			color: $colVerdFosc;
+			margin-bottom: 10px;
+		}
+		div div a {
+			display: block;			
+			width: auto; height: 140px;
+			overflow: hidden;
+			border: 1px solid $colGrisFosc;
+			&:first-child {
+				margin-left: 20px;
+			}
+		}
+		#slide-runner a img {
+			height: 140px;
+		}
+		.slides_container a img {
+			width: auto; height: 140px;
+		}	
+		.pagination {
+			@include lletra(normal, 1.2, 1em);
+			margin-top: 38px;
+			width: 100%;
+			text-align: center;
+			padding-top: 0px;
+			height: 15px;
+			background-color: $colNegre;
+			li {
+				display: inline;
+				margin: 0 4px;
+				a {
+					color: $colGrisFosc;
+				}
+				&.current a {
+					color: $colNegre;
+				}
+			}
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			width: (693 / 960) * 100%;	
+			div div a {
+				float: left;	
+				margin-left: 38px;
+			}	
+			#slide-runner a img {
+				width: 130px; 
+			}
+		}
+	}
+
 /*---------------------------------------------- */
 
 /*---------------------------------------------- */
 /* !4 - FOOTER */
 	#footer {
 		clear: both;
-		background-color: #ededed;
+		background-color: $colGrisClar;
 		margin-top: 60px;
 		padding: 20px;
 		h3 {
@@ -890,7 +1193,7 @@
 		.quadreContacte {
 			@include lletra(bold, 1.2, 1.4em);
 			padding: 0px 5px 10px 25px;
-			border-bottom: 1px solid #c9c9c9;
+			border-bottom: 1px solid $colGrisFosc;
 			margin-bottom: 30px;
 			background: $strIcones no-repeat -20px -84px transparent;
 		}
@@ -926,7 +1229,7 @@
 			}
 			li {
 				padding: 5px 5px 5px 30px;
-			border-bottom: 1px solid #c9c9c9;
+			border-bottom: 1px solid $colGrisFosc;
 			margin-bottom: 20px;
 
 			}
@@ -973,8 +1276,21 @@
 				margin-left: (15px / 960px) * 100%;
 			}		
 		}
-		
 	}
+	#webcreator {
+		@include lletra(normal, 1, 1.2em);
+		color: $colGrisLletra;
+		padding-top:10px;
+		a {
+			color: $colGrisLletra;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+}
+
+
 /*---------------------------------------------- */
 
 /*---------------------------------------------- */
@@ -984,6 +1300,103 @@
 
 /*---------------------------------------------- */
 /* !6 - RIGHT */
+		
+/*
+	#main2 #boxInfoPdf,#main2 #boxInfoVideo {
+		width:203px;
+	}
+*/
+		
 // !6.1 - Formulari
 // !6.2 - Descarregar
+	#boxInfo {
+		@include lletra(normal, 1.2, 1.5em);
+		border:1px solid $colGrisFosc;
+		color:$colGrisLletra;
+		text-align: left;
+		padding:10px;
+		h2 {
+			@include lletra(bold, 1.8, 1.3em);
+			text-align: left; 
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			text-align:justify;
+		}
+	}
+	#boxInfoPdf {
+		@include lletra(bold, 1.2, 1.5em);
+		border:1px solid $colGrisFosc;
+		color:$colGrisLletra;
+		text-align:left;
+		background-color:$colGrisClar;
+		padding:10px;
+		h2 {
+			@include lletra(bold, 1.4, 1.7em);
+			text-align: left;
+			padding-bottom: 10px;
+		}
+		.descarrega {
+			@include lletra(bold, 1.2, 1.5em);
+			border-bottom:1px solid $colGrisFosc;
+			padding-bottom:15px;
+			padding-top:15px;
+			background:url(../UserFiles/Image/iconos/icono-pdf.png) no-repeat right center transparent;
+		}
+		a {
+			text-decoration:none;
+			color:$colGrisLletra;
+			font-weight:bold;
+			display: block;
+			&:last-child .descarrega {
+				border-bottom: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			text-align: justify;
+		}
+	}
+
+	#boxInfoVideo {
+		@include lletra(bold, 1.2, 1.5em);
+		border:1px solid $colGrisFosc;
+	//	width:200px;
+		color:$colGrisLletra;
+		text-align:left;
+		background-color:$colGrisClar;
+		padding:10px;
+		h2 {
+			@include lletra(bold, 1.4, 1.7em);
+			padding-bottom: 10px;
+			text-align: left;
+		}
+		.descarrega {
+			@include lletra(bold, 1.2, 1.5em);
+			padding-bottom:15px;
+			padding-top:15px;
+			background:url(../UserFiles/Image/iconos/icono-tv.png) no-repeat right top transparent;
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			color: $colGrisLletra;
+			font-weight: bold;
+			&:hover {
+				text-decoration: underline;
+			}
+			&:last-child .descarrega {
+				border-bottom: none;
+			}
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			text-align: justify;		
+		}
+		
+	}
+
 // !6.1 - Formulari Gran

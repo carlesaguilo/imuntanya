@@ -109,6 +109,13 @@ var slider={
   slider.al=window.setTimeout('slider.auto();',slider.at);
 
   var d=slider.data;
+  var ampWin=300;
+  if (window.innerWidth > 1200) {
+	  ampWin = 1200;
+  }
+  else {
+	  ampWin = 1000;
+  }
   for(var i=0;i<slider.num;i++)
    $('#'+d[i].id).stop().animate({left:((i-pos)*1000)},1000,'swing');
   
