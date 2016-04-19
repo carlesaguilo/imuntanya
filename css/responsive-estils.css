@@ -116,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /*Amagar del navegador pero no dels buscadors */
 /* line 137, ../compass/sass/responsive-estils.scss */
-.amagar {
+.amagar, .showMenu a span {
   position: absolute;
   left: -10000px;
   height: 1px;
@@ -277,18 +277,22 @@ body {
   -o-transition: background-color 0.25s ease-in;
   -webkit-transition: background-color 0.25s ease-in;
   transition: background-color 0.25s ease-in;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   color: #FFFFFF;
   background-color: #8D9C01;
   display: block;
   text-decoration: none;
   text-align: center;
   padding: 2px 5px;
+  min-width: 20px;
 }
-/* line 254, ../compass/sass/responsive-estils.scss */
+/* line 256, ../compass/sass/responsive-estils.scss */
 .idiomes a:hover {
   background-color: #C9C9C9;
 }
-/* line 259, ../compass/sass/responsive-estils.scss */
+/* line 261, ../compass/sass/responsive-estils.scss */
 .idiomes .current a {
   background-color: #C9C9C9;
 }
@@ -305,18 +309,18 @@ body {
   }
 }
 
-/* line 271, ../compass/sass/responsive-estils.scss */
+/* line 273, ../compass/sass/responsive-estils.scss */
 .coordenades {
   color: #9C9C9C;
   margin-top: 20px;
 }
-/* line 274, ../compass/sass/responsive-estils.scss */
+/* line 276, ../compass/sass/responsive-estils.scss */
 .coordenades p {
   padding: 3px 0 3px 25px;
   margin-left: 25px;
-  background: url("/templates/imuntanya/UserFiles/Image/principal/icones.png") no-repeat 0 0 transparent;
+  background: url("/templates/imuntanya/UserFiles/Image/principal/icones.svg") no-repeat 0 0 transparent;
 }
-/* line 280, ../compass/sass/responsive-estils.scss */
+/* line 282, ../compass/sass/responsive-estils.scss */
 .coordenades a {
   -moz-transition: color 0.25s ease-in;
   -o-transition: color 0.25s ease-in;
@@ -325,12 +329,12 @@ body {
   text-decoration: none;
   color: #9C9C9C;
 }
-/* line 284, ../compass/sass/responsive-estils.scss */
+/* line 286, ../compass/sass/responsive-estils.scss */
 .coordenades a:hover {
   text-decoration: underline;
   color: #8D9C01;
 }
-/* line 289, ../compass/sass/responsive-estils.scss */
+/* line 291, ../compass/sass/responsive-estils.scss */
 .coordenades .emilio {
   font-weight: bold;
   font-size: 12px;
@@ -340,7 +344,7 @@ body {
   font-style: normal;
   background-position: left 3px;
 }
-/* line 293, ../compass/sass/responsive-estils.scss */
+/* line 295, ../compass/sass/responsive-estils.scss */
 .coordenades .telf {
   font-weight: bold;
   font-size: 14px;
@@ -351,18 +355,49 @@ body {
   background-position: 0 -25px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 271, ../compass/sass/responsive-estils.scss */
+  /* line 273, ../compass/sass/responsive-estils.scss */
   .coordenades {
     float: right;
     clear: right;
   }
-  /* line 302, ../compass/sass/responsive-estils.scss */
+  /* line 304, ../compass/sass/responsive-estils.scss */
   .coordenades p {
     float: left;
   }
 }
 
-/* line 308, ../compass/sass/responsive-estils.scss */
+/* line 310, ../compass/sass/responsive-estils.scss */
+.showMenu {
+  width: 100%;
+  background-color: #EDEDED;
+  text-align: center;
+  padding: 8px 0;
+  margin-top: 20px;
+}
+/* line 316, ../compass/sass/responsive-estils.scss */
+.showMenu a {
+  height: 15px;
+  width: 22px;
+  background: url("/templates/imuntanya/UserFiles/Image/principal/icones.svg") -15px -510px;
+  text-decoration: none;
+  color: #C9C9C9;
+  display: block;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 310, ../compass/sass/responsive-estils.scss */
+  .showMenu {
+    display: none;
+  }
+}
+
+/* line 334, ../compass/sass/responsive-estils.scss */
+nav {
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 337, ../compass/sass/responsive-estils.scss */
 #main_menu {
   font-weight: bold;
   font-size: 14px;
@@ -370,43 +405,58 @@ body {
   line-height: 1.3em;
   font-family: Arial, sans-serif;
   font-style: normal;
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -moz-transition: -moz-transform 1s ease-in-out;
+  -o-transition: -o-transform 1s ease-in-out;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
   color: #333333;
-  margin-top: 50px;
   z-index: 220;
   width: auto;
+  height: 0;
+  overflow: hidden;
 }
-/* line 314, ../compass/sass/responsive-estils.scss */
+/* line 345, ../compass/sass/responsive-estils.scss */
+#main_menu.highlight {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  height: auto;
+}
+/* line 349, ../compass/sass/responsive-estils.scss */
 #main_menu > li {
-  margin-left: 30px;
   z-index: 230;
 }
-/* line 317, ../compass/sass/responsive-estils.scss */
+/* line 352, ../compass/sass/responsive-estils.scss */
 #main_menu > li a {
   color: #333333;
   padding: 5px 14px 0px 0px;
   display: block;
   text-decoration: none;
 }
-/* line 322, ../compass/sass/responsive-estils.scss */
+/* line 357, ../compass/sass/responsive-estils.scss */
 #main_menu > li a:hover span {
   color: #8D9C01;
-  border-bottom: 2px solid #8D9C01;
 }
-/* line 327, ../compass/sass/responsive-estils.scss */
+/* line 361, ../compass/sass/responsive-estils.scss */
 #main_menu > li span {
   display: block;
   padding-bottom: 8px;
 }
-/* line 331, ../compass/sass/responsive-estils.scss */
+/* line 365, ../compass/sass/responsive-estils.scss */
 #main_menu > li#current > a span {
   color: #8D9C01;
   border-bottom: 2px solid #8D9C01;
 }
-/* line 337, ../compass/sass/responsive-estils.scss */
+/* line 371, ../compass/sass/responsive-estils.scss */
 #main_menu > li.parent a:hover span {
   border-bottom: none;
 }
-/* line 344, ../compass/sass/responsive-estils.scss */
+/* line 378, ../compass/sass/responsive-estils.scss */
 #main_menu li.mnRRHH a {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -415,36 +465,108 @@ body {
   background-color: #8D9C01;
   padding: 5px 7px 0 7px;
 }
-/* line 349, ../compass/sass/responsive-estils.scss */
+/* line 383, ../compass/sass/responsive-estils.scss */
 #main_menu li.mnRRHH a:hover {
   background-color: #333333;
 }
-/* line 351, ../compass/sass/responsive-estils.scss */
+/* line 385, ../compass/sass/responsive-estils.scss */
 #main_menu li.mnRRHH a:hover span {
   border-bottom: 0px;
   color: #FFFFFF;
 }
-@media only screen and (min-width: 48em) {
-  /* line 308, ../compass/sass/responsive-estils.scss */
+@media only screen and (min-width: 61.25em) {
+  /* line 337, ../compass/sass/responsive-estils.scss */
   #main_menu {
     float: right;
     clear: right;
+    margin-top: 50px;
   }
-  /* line 363, ../compass/sass/responsive-estils.scss */
+  /* line 398, ../compass/sass/responsive-estils.scss */
   #main_menu > li {
+    margin-left: 30px;
     float: left;
   }
-  /* line 365, ../compass/sass/responsive-estils.scss */
-  #main_menu > li.parent a {
-    background: url("/templates/imuntanya/UserFiles/Image/principal/icones.png") no-repeat right -236px;
+  /* line 402, ../compass/sass/responsive-estils.scss */
+  #main_menu > li a:hover span {
+    border-bottom: 2px solid #8D9C01;
   }
-  /* line 367, ../compass/sass/responsive-estils.scss */
+  /* line 406, ../compass/sass/responsive-estils.scss */
+  #main_menu > li.parent a {
+    background: url("/templates/imuntanya/UserFiles/Image/principal/icones.svg") no-repeat right -236px;
+  }
+  /* line 408, ../compass/sass/responsive-estils.scss */
   #main_menu > li.parent a:hover {
     background-position: right -188px;
   }
-  /* line 369, ../compass/sass/responsive-estils.scss */
+  /* line 410, ../compass/sass/responsive-estils.scss */
   #main_menu > li.parent a:hover span {
     border-bottom: none;
+  }
+}
+
+/* line 420, ../compass/sass/responsive-estils.scss */
+#main_menu .parent ul {
+  color: #9C9C9C;
+  z-index: 999;
+}
+/* line 423, ../compass/sass/responsive-estils.scss */
+#main_menu .parent ul ul {
+  box-shadow: 0px 0px 0px transparent;
+  position: relative;
+}
+/* line 429, ../compass/sass/responsive-estils.scss */
+#main_menu li:hover ul,
+#main_menu li.sfhover ul {
+  left: auto;
+}
+/* line 434, ../compass/sass/responsive-estils.scss */
+#main_menu .parent li {
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.2em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  border-bottom: 2px solid #EDEDED;
+  float: none;
+}
+/* line 440, ../compass/sass/responsive-estils.scss */
+#main_menu .parent ul li a {
+  padding: 0px;
+}
+/* line 443, ../compass/sass/responsive-estils.scss */
+#main_menu .parent ul span {
+  padding: 7px 5px 5px 10px;
+  background-color: #8D9C01;
+  color: #FFFFFF;
+  display: block;
+  letter-spacing: 1px;
+}
+/* line 450, ../compass/sass/responsive-estils.scss */
+#main_menu .parent ul a span {
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #333333;
+  background-color: #FFFFFF;
+  letter-spacing: 0px;
+}
+/* line 456, ../compass/sass/responsive-estils.scss */
+#main_menu .parent ul a:hover span {
+  background-color: #DCE2B2;
+  border: none;
+}
+/* line 460, ../compass/sass/responsive-estils.scss */
+#main_menu .parent ul ul a span {
+  padding-left: 20px;
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 468, ../compass/sass/responsive-estils.scss */
+  #main_menu .parent ul {
+    position: absolute;
+    left: -10000px;
+    width: 390px;
   }
 }
 
