@@ -883,19 +883,32 @@ div#slideshow {
     height: auto;
   }
 }
+/* line 718, ../compass/sass/responsive-estils.scss */
+div#slideshow.slideInterior .wrap,
+div#slideshow.slideInterior div#slide-holder div#slide-controls,
+div#slideshow.slideInterior div#slide-holder div#slide-runner,
+div#slideshow.slideInterior div#slide-holder {
+  width: 100%;
+}
+/* line 724, ../compass/sass/responsive-estils.scss */
+div#slideshow.slideInterior div#slide-holder div#slide-controls #slide-client.text,
+div#slideshow.slideInterior div#slide-holder div#slide-controls #slide-desc.text {
+  padding: 0;
+  display: none;
+}
 
-/* line 719, ../compass/sass/responsive-estils.scss */
+/* line 732, ../compass/sass/responsive-estils.scss */
 div#video-slideshow {
   height: 300px;
   margin: -1px 0 0;
 }
 
-/* line 724, ../compass/sass/responsive-estils.scss */
+/* line 737, ../compass/sass/responsive-estils.scss */
 div#slideshow div.wrap {
   height: 300px;
 }
 
-/* line 727, ../compass/sass/responsive-estils.scss */
+/* line 740, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder {
   z-index: 40;
   width: 960px;
@@ -903,13 +916,13 @@ div#slideshow div#slide-holder {
   position: absolute;
 }
 
-/* line 737, ../compass/sass/responsive-estils.scss */
+/* line 750, ../compass/sass/responsive-estils.scss */
 #main2 div#slideshow div#slide-holder,
 #main2 div#slideshow div#slide-holder div#slide-runner {
   width: 715px;
 }
 
-/* line 742, ../compass/sass/responsive-estils.scss */
+/* line 755, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-runner {
   top: 0;
   left: 0;
@@ -919,7 +932,7 @@ div#slideshow div#slide-holder div#slide-runner {
   position: absolute;
 }
 
-/* line 755, ../compass/sass/responsive-estils.scss */
+/* line 768, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder img {
   margin: 0;
   display: none;
@@ -927,7 +940,7 @@ div#slideshow div#slide-holder img {
   left: 0;
 }
 
-/* line 762, ../compass/sass/responsive-estils.scss */
+/* line 775, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls {
   /* Portada */
   left: 0;
@@ -940,20 +953,20 @@ div#slideshow div#slide-holder div#slide-controls {
   z-index: 120;
 }
 
-/* line 777, ../compass/sass/responsive-estils.scss */
+/* line 790, ../compass/sass/responsive-estils.scss */
 #main2 div#slideshow div#slide-holder div#slide-controls {
   /*Interior*/
   width: 705px;
   height: 300px;
 }
 
-/* line 782, ../compass/sass/responsive-estils.scss */
+/* line 795, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls div.text {
   float: left;
   display: inline;
 }
 
-/* line 787, ../compass/sass/responsive-estils.scss */
+/* line 800, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls #slide-client.text {
   font: bold 18px/1.2em Arial, sans-serif;
   color: #8D9C01;
@@ -976,19 +989,19 @@ div#slideshow div#slide-holder div#slide-controls #slide-client.text {
   background: rgba(255, 255, 255, 0.8);
 }
 @media only screen and (min-width: 48em) {
-  /* line 787, ../compass/sass/responsive-estils.scss */
+  /* line 800, ../compass/sass/responsive-estils.scss */
   div#slideshow div#slide-holder div#slide-controls #slide-client.text {
     top: 80px;
     left: 30px;
   }
 }
 
-/* line 813, ../compass/sass/responsive-estils.scss */
+/* line 826, ../compass/sass/responsive-estils.scss */
 #main2 div#slideshow div#slide-holder div#slide-controls #slide-client.text {
   background-color: transparent;
 }
 
-/* line 817, ../compass/sass/responsive-estils.scss */
+/* line 830, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls #slide-desc.text {
   font: normal 14px/1.5em Arial, sans-serif;
   color: #333333;
@@ -1007,37 +1020,37 @@ div#slideshow div#slide-holder div#slide-controls #slide-desc.text {
   padding: 10px 10px 20px 10px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 817, ../compass/sass/responsive-estils.scss */
+  /* line 830, ../compass/sass/responsive-estils.scss */
   div#slideshow div#slide-holder div#slide-controls #slide-desc.text {
     top: 123px;
     left: 30px;
   }
 }
 
-/* line 837, ../compass/sass/responsive-estils.scss */
+/* line 850, ../compass/sass/responsive-estils.scss */
 #main2 div#slideshow div#slide-holder div#slide-controls #slide-desc.text {
   background-color: transparent;
 }
 
-/* line 840, ../compass/sass/responsive-estils.scss */
+/* line 853, ../compass/sass/responsive-estils.scss */
 div#slide-desc.text ul {
   list-style-image: url(../UserFiles/Image/principal/punt_verd.png);
   margin-left: 33px;
 }
 
-/* line 844, ../compass/sass/responsive-estils.scss */
+/* line 857, ../compass/sass/responsive-estils.scss */
 div#slide-desc.text li {
   padding-left: 5px;
 }
 
-/* line 848, ../compass/sass/responsive-estils.scss */
+/* line 861, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls div#slide-nav {
   position: absolute;
   bottom: 10px;
   right: 50px;
 }
 
-/* line 854, ../compass/sass/responsive-estils.scss */
+/* line 867, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls div#slide-nav a {
   font: normal 12px/1em Arial;
   color: #C9C9C9;
@@ -1050,28 +1063,28 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a {
   background-color: #ffffff;
 }
 
-/* line 866, ../compass/sass/responsive-estils.scss */
+/* line 879, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls div#slide-nav a.on {
   background-color: #C9C9C9;
   color: #333333;
 }
 
-/* line 871, ../compass/sass/responsive-estils.scss */
+/* line 884, ../compass/sass/responsive-estils.scss */
 div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   cursor: pointer;
 }
 
-/* line 874, ../compass/sass/responsive-estils.scss */
+/* line 887, ../compass/sass/responsive-estils.scss */
 #contentarea {
   position: relative;
 }
 
-/* line 878, ../compass/sass/responsive-estils.scss */
+/* line 891, ../compass/sass/responsive-estils.scss */
 #texte {
   color: #333333;
   text-align: left;
 }
-/* line 881, ../compass/sass/responsive-estils.scss */
+/* line 894, ../compass/sass/responsive-estils.scss */
 #texte h2 {
   font-weight: bold;
   font-size: 18px;
@@ -1081,7 +1094,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   font-style: normal;
   margin: 1.5em 0 .5em 0;
 }
-/* line 885, ../compass/sass/responsive-estils.scss */
+/* line 898, ../compass/sass/responsive-estils.scss */
 #texte p, #texte ul, #texte ol {
   font-weight: normal;
   font-size: 14px;
@@ -1091,44 +1104,46 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   font-style: normal;
   margin-bottom: .5em;
 }
-/* line 889, ../compass/sass/responsive-estils.scss */
+/* line 902, ../compass/sass/responsive-estils.scss */
 #texte ul {
   margin-left: 2em;
   list-style-image: url(../UserFiles/Image/principal/punt_verd7.png);
 }
-/* line 893, ../compass/sass/responsive-estils.scss */
+/* line 906, ../compass/sass/responsive-estils.scss */
 #texte ul ul {
   list-style-image: url(../UserFiles/Image/principal/guionet.png);
 }
-/* line 896, ../compass/sass/responsive-estils.scss */
+/* line 909, ../compass/sass/responsive-estils.scss */
 #texte li {
   margin-bottom: .5em;
 }
 
-/* line 900, ../compass/sass/responsive-estils.scss */
+/* line 913, ../compass/sass/responsive-estils.scss */
 #video p {
   text-align: justify;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 905, ../compass/sass/responsive-estils.scss */
+  /* line 918, ../compass/sass/responsive-estils.scss */
   #main2 {
+    margin-bottom: 4em;
     float: left;
     width: 74.47917%;
   }
-
-  /* line 909, ../compass/sass/responsive-estils.scss */
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 926, ../compass/sass/responsive-estils.scss */
   #texte {
-    width: 46.35417%;
+    width: 62.23776%;
     float: left;
-    margin-right: 4.6875%;
+    margin-right: 6.29371%;
   }
 }
-/* line 915, ../compass/sass/responsive-estils.scss */
+/* line 932, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal {
   text-align: left;
 }
-/* line 918, ../compass/sass/responsive-estils.scss */
+/* line 935, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal h1 {
   font-weight: bold;
   font-size: 30px;
@@ -1139,7 +1154,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   color: #8D9C01;
   padding-bottom: 15px;
 }
-/* line 923, ../compass/sass/responsive-estils.scss */
+/* line 940, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal h2 {
   font-weight: bold;
   font-size: 21px;
@@ -1149,7 +1164,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   font-style: normal;
   color: #333333;
 }
-/* line 927, ../compass/sass/responsive-estils.scss */
+/* line 944, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal h3 {
   font-weight: bold;
   font-size: 13px;
@@ -1162,20 +1177,20 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   background-color: #EDEDED;
   margin-bottom: 10px;
 }
-/* line 934, ../compass/sass/responsive-estils.scss */
+/* line 951, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .menuEsquerra {
   text-align: left;
 }
-/* line 936, ../compass/sass/responsive-estils.scss */
+/* line 953, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .menuEsquerra h1 {
   color: #333333;
 }
-/* line 940, ../compass/sass/responsive-estils.scss */
+/* line 957, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .menuDreta {
   max-width: 480px;
   margin: 2em auto 0 auto;
 }
-/* line 944, ../compass/sass/responsive-estils.scss */
+/* line 961, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .titolArxius {
   font-weight: bold;
   font-size: 18px;
@@ -1185,7 +1200,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   font-style: normal;
   color: #333333;
 }
-/* line 948, ../compass/sass/responsive-estils.scss */
+/* line 965, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .titolData {
   background-color: #EDEDED;
   padding-left: 8px;
@@ -1194,21 +1209,21 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   font-style: italic;
   font-weight: bold;
 }
-/* line 956, ../compass/sass/responsive-estils.scss */
+/* line 973, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .menuEsquerraContact {
   text-align: left;
   padding-right: 10px;
 }
-/* line 959, ../compass/sass/responsive-estils.scss */
+/* line 976, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .menuEsquerraContact h1 {
   color: #333333;
 }
-/* line 963, ../compass/sass/responsive-estils.scss */
+/* line 980, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .image {
   position: relative;
   border: 1px solid #C9C9C9;
 }
-/* line 966, ../compass/sass/responsive-estils.scss */
+/* line 983, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .image h4 {
   position: absolute;
   top: 145px;
@@ -1216,7 +1231,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   width: 100%;
   height: 16px;
 }
-/* line 972, ../compass/sass/responsive-estils.scss */
+/* line 989, ../compass/sass/responsive-estils.scss */
 #bodyPrincipal .image h4 span {
   font-weight: bold;
   font-size: 14px;
@@ -1234,67 +1249,67 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   padding: 10px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 915, ../compass/sass/responsive-estils.scss */
+  /* line 932, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px;
   }
-  /* line 989, ../compass/sass/responsive-estils.scss */
+  /* line 1006, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .menuEsquerra {
     float: left;
     width: 66%;
     text-align: justify;
     margin-right: 3%;
   }
-  /* line 995, ../compass/sass/responsive-estils.scss */
+  /* line 1012, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .menuDreta {
     float: left;
     width: 31%;
     margin: 0;
     max-width: none;
   }
-  /* line 1001, ../compass/sass/responsive-estils.scss */
+  /* line 1018, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .menuEsquerraContact {
     float: left;
     width: 520px;
     text-align: justify;
     padding-right: 10px;
   }
-  /* line 1007, ../compass/sass/responsive-estils.scss */
+  /* line 1024, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .caixaimage {
     float: left;
     padding-left: 0.83333%;
     padding-top: 10px;
   }
-  /* line 1012, ../compass/sass/responsive-estils.scss */
+  /* line 1029, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .menuDretaContact {
     float: left;
     padding-left: 1.04167%;
   }
-  /* line 1016, ../compass/sass/responsive-estils.scss */
+  /* line 1033, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .image {
     width: 23.95833%;
   }
 }
 @media only screen and (min-width: 61.25em) {
-  /* line 915, ../compass/sass/responsive-estils.scss */
+  /* line 932, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal {
     padding: 0;
   }
-  /* line 1023, ../compass/sass/responsive-estils.scss */
+  /* line 1040, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .menuEsquerra {
     width: 74.58333%;
     margin-right: 2.08333%;
   }
-  /* line 1027, ../compass/sass/responsive-estils.scss */
+  /* line 1044, ../compass/sass/responsive-estils.scss */
   #bodyPrincipal .menuDreta {
     width: 23.33333%;
   }
 }
 
-/* line 1033, ../compass/sass/responsive-estils.scss */
+/* line 1050, ../compass/sass/responsive-estils.scss */
 #migas {
   font-size: 12px;
   font-size: 1.2rem;
@@ -1302,23 +1317,23 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   padding-top: 10px;
   margin-left: 10px;
 }
-/* line 1038, ../compass/sass/responsive-estils.scss */
+/* line 1055, ../compass/sass/responsive-estils.scss */
 #migas a, #migas span {
   text-decoration: none;
   color: #8D9C01;
 }
-/* line 1042, ../compass/sass/responsive-estils.scss */
+/* line 1059, ../compass/sass/responsive-estils.scss */
 #migas a:hover {
   text-decoration: underline;
 }
-/* line 1045, ../compass/sass/responsive-estils.scss */
+/* line 1062, ../compass/sass/responsive-estils.scss */
 #migas strong {
   font-weight: bold;
   color: #333333;
 }
 
 /* 3.2.1 - Productes */
-/* line 1055, ../compass/sass/responsive-estils.scss */
+/* line 1072, ../compass/sass/responsive-estils.scss */
 #galeria {
   background-color: #EDEDED;
   border: 1px solid #C9C9C9;
@@ -1326,7 +1341,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   margin-bottom: 20px;
   height: 155px;
 }
-/* line 1061, ../compass/sass/responsive-estils.scss */
+/* line 1078, ../compass/sass/responsive-estils.scss */
 #galeria h3 {
   font-weight: bold;
   font-size: 14px;
@@ -1337,14 +1352,14 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   color: #8D9C01;
   margin-bottom: 10px;
 }
-/* line 1067, ../compass/sass/responsive-estils.scss */
+/* line 1084, ../compass/sass/responsive-estils.scss */
 #galeria a img {
   height: 86px;
   width: auto;
   display: inline;
   border: 1px solid #C9C9C9;
 }
-/* line 1073, ../compass/sass/responsive-estils.scss */
+/* line 1090, ../compass/sass/responsive-estils.scss */
 #galeria div div a {
   display: inline-block;
   vertical-align: middle;
@@ -1357,11 +1372,11 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   overflow: hidden;
   text-align: center;
 }
-/* line 1079, ../compass/sass/responsive-estils.scss */
+/* line 1096, ../compass/sass/responsive-estils.scss */
 #galeria div div a:first-child {
   margin-left: 0px;
 }
-/* line 1083, ../compass/sass/responsive-estils.scss */
+/* line 1100, ../compass/sass/responsive-estils.scss */
 #galeria .pagination {
   font-weight: normal;
   font-size: 12px;
@@ -1373,32 +1388,32 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   text-align: center;
   padding-top: 10px;
 }
-/* line 1088, ../compass/sass/responsive-estils.scss */
+/* line 1105, ../compass/sass/responsive-estils.scss */
 #galeria .pagination li {
   display: inline;
   margin: 0 4px;
 }
-/* line 1091, ../compass/sass/responsive-estils.scss */
+/* line 1108, ../compass/sass/responsive-estils.scss */
 #galeria .pagination li a {
   color: #C9C9C9;
 }
-/* line 1094, ../compass/sass/responsive-estils.scss */
+/* line 1111, ../compass/sass/responsive-estils.scss */
 #galeria .pagination li.current a {
   color: #333333;
 }
 @media only screen and (min-width: 48em) {
-  /* line 1055, ../compass/sass/responsive-estils.scss */
+  /* line 1072, ../compass/sass/responsive-estils.scss */
   #galeria {
     width: 72.1875%;
   }
 }
 
-/* line 1106, ../compass/sass/responsive-estils.scss */
+/* line 1123, ../compass/sass/responsive-estils.scss */
 .slides_container {
   width: 693px;
   height: 88px;
 }
-/* line 1109, ../compass/sass/responsive-estils.scss */
+/* line 1126, ../compass/sass/responsive-estils.scss */
 .slides_container div {
   width: 693px;
   height: 88px;
@@ -1406,7 +1421,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   text-align: center;
 }
 
-/* line 1116, ../compass/sass/responsive-estils.scss */
+/* line 1133, ../compass/sass/responsive-estils.scss */
 #galeria2 {
   background-color: #EDEDED;
   border: 1px solid #C9C9C9;
@@ -1414,7 +1429,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   margin-bottom: 20px;
   height: 188px;
 }
-/* line 1122, ../compass/sass/responsive-estils.scss */
+/* line 1139, ../compass/sass/responsive-estils.scss */
 #galeria2 h3 {
   font-weight: bold;
   font-size: 14px;
@@ -1425,7 +1440,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   color: #8D9C01;
   margin-bottom: 10px;
 }
-/* line 1127, ../compass/sass/responsive-estils.scss */
+/* line 1144, ../compass/sass/responsive-estils.scss */
 #galeria2 div div a {
   display: block;
   width: auto;
@@ -1433,20 +1448,20 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   overflow: hidden;
   border: 1px solid #C9C9C9;
 }
-/* line 1132, ../compass/sass/responsive-estils.scss */
+/* line 1149, ../compass/sass/responsive-estils.scss */
 #galeria2 div div a:first-child {
   margin-left: 20px;
 }
-/* line 1136, ../compass/sass/responsive-estils.scss */
+/* line 1153, ../compass/sass/responsive-estils.scss */
 #galeria2 #slide-runner a img {
   height: 140px;
 }
-/* line 1139, ../compass/sass/responsive-estils.scss */
+/* line 1156, ../compass/sass/responsive-estils.scss */
 #galeria2 .slides_container a img {
   width: auto;
   height: 140px;
 }
-/* line 1142, ../compass/sass/responsive-estils.scss */
+/* line 1159, ../compass/sass/responsive-estils.scss */
 #galeria2 .pagination {
   font-weight: normal;
   font-size: 12px;
@@ -1461,30 +1476,30 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   height: 15px;
   background-color: #333333;
 }
-/* line 1150, ../compass/sass/responsive-estils.scss */
+/* line 1167, ../compass/sass/responsive-estils.scss */
 #galeria2 .pagination li {
   display: inline;
   margin: 0 4px;
 }
-/* line 1153, ../compass/sass/responsive-estils.scss */
+/* line 1170, ../compass/sass/responsive-estils.scss */
 #galeria2 .pagination li a {
   color: #C9C9C9;
 }
-/* line 1156, ../compass/sass/responsive-estils.scss */
+/* line 1173, ../compass/sass/responsive-estils.scss */
 #galeria2 .pagination li.current a {
   color: #333333;
 }
 @media only screen and (min-width: 48em) {
-  /* line 1116, ../compass/sass/responsive-estils.scss */
+  /* line 1133, ../compass/sass/responsive-estils.scss */
   #galeria2 {
     width: 72.1875%;
   }
-  /* line 1164, ../compass/sass/responsive-estils.scss */
+  /* line 1181, ../compass/sass/responsive-estils.scss */
   #galeria2 div div a {
     float: left;
     margin-left: 38px;
   }
-  /* line 1168, ../compass/sass/responsive-estils.scss */
+  /* line 1185, ../compass/sass/responsive-estils.scss */
   #galeria2 #slide-runner a img {
     width: 130px;
   }
@@ -1493,7 +1508,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
 /*---------------------------------------------- */
 /*---------------------------------------------- */
 /* !4 - FOOTER */
-/* line 1178, ../compass/sass/responsive-estils.scss */
+/* line 1195, ../compass/sass/responsive-estils.scss */
 #footer {
   clear: both;
   background-color: #EDEDED;
@@ -1504,7 +1519,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   /* !4.3 - Links Socials */
   /* !4.4 - Copyright */
 }
-/* line 1183, ../compass/sass/responsive-estils.scss */
+/* line 1200, ../compass/sass/responsive-estils.scss */
 #footer h3 {
   font-weight: bold;
   font-size: 14px;
@@ -1516,14 +1531,14 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   color: #333333;
   margin-bottom: 20px;
 }
-/* line 1189, ../compass/sass/responsive-estils.scss */
+/* line 1206, ../compass/sass/responsive-estils.scss */
 #footer a {
   -moz-transition: color 0.25s ease-in;
   -o-transition: color 0.25s ease-in;
   -webkit-transition: color 0.25s ease-in;
   transition: color 0.25s ease-in;
 }
-/* line 1193, ../compass/sass/responsive-estils.scss */
+/* line 1210, ../compass/sass/responsive-estils.scss */
 #footer .quadreContacte {
   font-weight: bold;
   font-size: 12px;
@@ -1536,27 +1551,27 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   margin-bottom: 30px;
   background: url("/templates/imuntanya/UserFiles/Image/principal/icones.svg") no-repeat -20px -84px transparent;
 }
-/* line 1200, ../compass/sass/responsive-estils.scss */
+/* line 1217, ../compass/sass/responsive-estils.scss */
 #footer .quadreContacte.quadreEmilio {
   background-position: -20px -285px;
 }
-/* line 1203, ../compass/sass/responsive-estils.scss */
+/* line 1220, ../compass/sass/responsive-estils.scss */
 #footer .quadreContacte.quadreEmilio a {
   color: #8D9C01;
   font-weight: bold;
 }
-/* line 1207, ../compass/sass/responsive-estils.scss */
+/* line 1224, ../compass/sass/responsive-estils.scss */
 #footer .quadreContacte.quadreEmilio a:hover {
   color: #9C9C9C;
   text-decoration: underline;
 }
-/* line 1212, ../compass/sass/responsive-estils.scss */
+/* line 1229, ../compass/sass/responsive-estils.scss */
 #footer .onSom iframe {
   border: 1px solid #C9C9C9;
   padding: 1px;
   max-width: 100%;
 }
-/* line 1217, ../compass/sass/responsive-estils.scss */
+/* line 1234, ../compass/sass/responsive-estils.scss */
 #footer .terceraPestanya {
   font-weight: bold;
   font-size: 12px;
@@ -1566,38 +1581,38 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   font-style: normal;
   text-align: left;
 }
-/* line 1220, ../compass/sass/responsive-estils.scss */
+/* line 1237, ../compass/sass/responsive-estils.scss */
 #footer .terceraPestanya a {
   color: #333333;
 }
-/* line 1222, ../compass/sass/responsive-estils.scss */
+/* line 1239, ../compass/sass/responsive-estils.scss */
 #footer .terceraPestanya a:hover {
   text-decoration: underline;
   color: #9C9C9C;
 }
-/* line 1227, ../compass/sass/responsive-estils.scss */
+/* line 1244, ../compass/sass/responsive-estils.scss */
 #footer .terceraPestanya ul {
   margin-left: 12px;
 }
-/* line 1230, ../compass/sass/responsive-estils.scss */
+/* line 1247, ../compass/sass/responsive-estils.scss */
 #footer .terceraPestanya li {
   padding: 5px 5px 5px 30px;
   border-bottom: 1px solid #C9C9C9;
   margin-bottom: 20px;
 }
-/* line 1237, ../compass/sass/responsive-estils.scss */
+/* line 1254, ../compass/sass/responsive-estils.scss */
 #footer .linksSocials li {
   background: url("/templates/imuntanya/UserFiles/Image/principal/icones.svg") no-repeat -19px -380px transparent;
 }
-/* line 1240, ../compass/sass/responsive-estils.scss */
+/* line 1257, ../compass/sass/responsive-estils.scss */
 #footer .linksSocials li.linkedin {
   background-position: -19px -329px;
 }
-/* line 1243, ../compass/sass/responsive-estils.scss */
+/* line 1260, ../compass/sass/responsive-estils.scss */
 #footer .linksSocials li.instagram {
   background-position: -19px -437px;
 }
-/* line 1247, ../compass/sass/responsive-estils.scss */
+/* line 1264, ../compass/sass/responsive-estils.scss */
 #footer .copyright {
   font-weight: bold;
   font-size: 12px;
@@ -1608,34 +1623,34 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   clear: both;
   margin-top: 20px;
 }
-/* line 1251, ../compass/sass/responsive-estils.scss */
+/* line 1268, ../compass/sass/responsive-estils.scss */
 #footer .copyright strong {
   color: #8D9C01;
 }
 @media only screen and (min-width: 48em) {
-  /* line 1178, ../compass/sass/responsive-estils.scss */
+  /* line 1195, ../compass/sass/responsive-estils.scss */
   #footer {
     padding: 20px 10px;
   }
-  /* line 1259, ../compass/sass/responsive-estils.scss */
+  /* line 1276, ../compass/sass/responsive-estils.scss */
   #footer .contactar {
     width: 32.29167%;
     margin-left: 0;
     float: left;
   }
-  /* line 1264, ../compass/sass/responsive-estils.scss */
+  /* line 1281, ../compass/sass/responsive-estils.scss */
   #footer .onSom {
     float: left;
     width: 32.29167%;
     margin-left: 1.5625%;
   }
-  /* line 1268, ../compass/sass/responsive-estils.scss */
+  /* line 1285, ../compass/sass/responsive-estils.scss */
   #footer .onSom iframe {
     margin-left: 0px;
     width: 100%;
     height: 174px;
   }
-  /* line 1273, ../compass/sass/responsive-estils.scss */
+  /* line 1290, ../compass/sass/responsive-estils.scss */
   #footer .terceraPestanya {
     float: left;
     width: 32.29167%;
@@ -1643,7 +1658,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   }
 }
 
-/* line 1280, ../compass/sass/responsive-estils.scss */
+/* line 1297, ../compass/sass/responsive-estils.scss */
 #webcreator {
   font-weight: normal;
   font-size: 10px;
@@ -1654,12 +1669,12 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   color: #504F4F;
   padding-top: 10px;
 }
-/* line 1284, ../compass/sass/responsive-estils.scss */
+/* line 1301, ../compass/sass/responsive-estils.scss */
 #webcreator a {
   color: #504F4F;
   text-decoration: none;
 }
-/* line 1287, ../compass/sass/responsive-estils.scss */
+/* line 1304, ../compass/sass/responsive-estils.scss */
 #webcreator a:hover {
   text-decoration: underline;
 }
@@ -1667,15 +1682,209 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
 /*---------------------------------------------- */
 /*---------------------------------------------- */
 /* !5 - LEFT */
+/* line 1315, ../compass/sass/responsive-estils.scss */
+#left {
+  margin-bottom: 2em;
+}
+/* line 1317, ../compass/sass/responsive-estils.scss */
+#left h3 {
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.1em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  color: #FFFFFF;
+  background-color: #8D9C01;
+  text-align: left;
+  padding: 48px 10px 8px 10px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 1315, ../compass/sass/responsive-estils.scss */
+  #left {
+    margin-bottom: 0;
+    float: left;
+    width: 23.4375%;
+    margin-right: 2.08333%;
+  }
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 1315, ../compass/sass/responsive-estils.scss */
+  #left {
+    width: 21.35417%;
+    margin-right: 4.16667%;
+  }
+}
+
+/* line 1339, ../compass/sass/responsive-estils.scss */
+#left .menu {
+  color: #333333;
+}
+/* line 1342, ../compass/sass/responsive-estils.scss */
+#left .menu li.parent span {
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  background-color: #DCE2B2;
+  padding: 6px 10px 4px 10px;
+  margin-bottom: 5px;
+  display: block;
+}
+/* line 1352, ../compass/sass/responsive-estils.scss */
+#left .menu li a {
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-transform: none;
+  margin-bottom: 5px;
+  display: block;
+  color: #333333;
+  background-color: #ededed;
+  padding: 1px 10px 0 20px;
+}
+/* line 1361, ../compass/sass/responsive-estils.scss */
+#left .menu li a:hover {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+/* line 1367, ../compass/sass/responsive-estils.scss */
+#left .menu .active a, #left .menu .parent.active a {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
 /*---------------------------------------------- */
 /*---------------------------------------------- */
 /* !6 - RIGHT */
+/* line 1377, ../compass/sass/responsive-estils.scss */
+#right {
+  max-width: 480px;
+  margin: 1em auto;
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 1377, ../compass/sass/responsive-estils.scss */
+  #right {
+    width: 31.46853%;
+    float: left;
+    margin: 0;
+    max-width: none;
+  }
+}
+
 /*
 	#main2 #boxInfoPdf,#main2 #boxInfoVideo {
 		width:203px;
 	}
 */
-/* line 1312, ../compass/sass/responsive-estils.scss */
+/* line 1396, ../compass/sass/responsive-estils.scss */
+#formInfo {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+/* line 1399, ../compass/sass/responsive-estils.scss */
+#formInfo input, #formInfo {
+  border: 1px solid #C9C9C9;
+}
+/* line 1402, ../compass/sass/responsive-estils.scss */
+#formInfo h3 {
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  color: #333333;
+  background-color: #EDEDED;
+  padding: 8px 10px 3px 10px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+/* line 1410, ../compass/sass/responsive-estils.scss */
+#formInfo p {
+  padding: 0 10px;
+}
+/* line 1413, ../compass/sass/responsive-estils.scss */
+#formInfo label,
+#formInfo input {
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  display: block;
+  margin-left: 0px;
+}
+/* line 1419, ../compass/sass/responsive-estils.scss */
+#formInfo label {
+  text-transform: lowercase;
+}
+/* line 1422, ../compass/sass/responsive-estils.scss */
+#formInfo input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 3px 2px;
+  font-weight: normal;
+}
+/* line 1430, ../compass/sass/responsive-estils.scss */
+#formInfo .obligatori {
+  color: red;
+}
+/* line 1433, ../compass/sass/responsive-estils.scss */
+#formInfo select {
+  margin: 0px 10px;
+  width: 200px;
+  border: 1px solid #c9c9c9;
+  padding: 2px 3px;
+  height: 27px;
+  font-size: 12px;
+  background-color: transparent;
+}
+/* line 1442, ../compass/sass/responsive-estils.scss */
+#formInfo button {
+  font-weight: bold;
+  font-size: 140px;
+  font-size: 14rem;
+  line-height: 1em;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  -moz-transition: background-color, 0.2s, ease-in-out;
+  -o-transition: background-color, 0.2s, ease-in-out;
+  -webkit-transition: background-color, 0.2s, ease-in-out;
+  transition: background-color, 0.2s, ease-in-out;
+  color: #FFFFFF;
+  border: 1px solid #8D9C01;
+  background-color: #8D9C01;
+  text-transform: lowercase;
+  width: 77px;
+  height: 30px;
+  float: right;
+  margin-top: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* line 1453, ../compass/sass/responsive-estils.scss */
+#formInfo button:hover {
+  background-color: #DCE2B2;
+  color: #333333;
+}
+
+/* line 1461, ../compass/sass/responsive-estils.scss */
 #boxInfo {
   font-weight: normal;
   font-size: 12px;
@@ -1688,7 +1897,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   text-align: left;
   padding: 10px;
 }
-/* line 1318, ../compass/sass/responsive-estils.scss */
+/* line 1467, ../compass/sass/responsive-estils.scss */
 #boxInfo h2 {
   font-weight: bold;
   font-size: 18px;
@@ -1699,13 +1908,13 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   text-align: left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 1312, ../compass/sass/responsive-estils.scss */
+  /* line 1461, ../compass/sass/responsive-estils.scss */
   #boxInfo {
     text-align: justify;
   }
 }
 
-/* line 1327, ../compass/sass/responsive-estils.scss */
+/* line 1476, ../compass/sass/responsive-estils.scss */
 #boxInfoPdf {
   font-weight: bold;
   font-size: 12px;
@@ -1719,7 +1928,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   background-color: #EDEDED;
   padding: 10px;
 }
-/* line 1334, ../compass/sass/responsive-estils.scss */
+/* line 1483, ../compass/sass/responsive-estils.scss */
 #boxInfoPdf h2 {
   font-weight: bold;
   font-size: 14px;
@@ -1730,7 +1939,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   text-align: left;
   padding-bottom: 10px;
 }
-/* line 1339, ../compass/sass/responsive-estils.scss */
+/* line 1488, ../compass/sass/responsive-estils.scss */
 #boxInfoPdf .descarrega {
   font-weight: bold;
   font-size: 12px;
@@ -1743,29 +1952,29 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   padding-top: 15px;
   background: url(../UserFiles/Image/iconos/icono-pdf.png) no-repeat right center transparent;
 }
-/* line 1346, ../compass/sass/responsive-estils.scss */
+/* line 1495, ../compass/sass/responsive-estils.scss */
 #boxInfoPdf a {
   text-decoration: none;
   color: #504F4F;
   font-weight: bold;
   display: block;
 }
-/* line 1351, ../compass/sass/responsive-estils.scss */
+/* line 1500, ../compass/sass/responsive-estils.scss */
 #boxInfoPdf a:last-child .descarrega {
   border-bottom: none;
 }
-/* line 1354, ../compass/sass/responsive-estils.scss */
+/* line 1503, ../compass/sass/responsive-estils.scss */
 #boxInfoPdf a:hover {
   text-decoration: underline;
 }
 @media only screen and (min-width: 48em) {
-  /* line 1327, ../compass/sass/responsive-estils.scss */
+  /* line 1476, ../compass/sass/responsive-estils.scss */
   #boxInfoPdf {
     text-align: justify;
   }
 }
 
-/* line 1364, ../compass/sass/responsive-estils.scss */
+/* line 1513, ../compass/sass/responsive-estils.scss */
 #boxInfoVideo {
   font-weight: bold;
   font-size: 12px;
@@ -1779,7 +1988,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   background-color: #EDEDED;
   padding: 10px;
 }
-/* line 1372, ../compass/sass/responsive-estils.scss */
+/* line 1521, ../compass/sass/responsive-estils.scss */
 #boxInfoVideo h2 {
   font-weight: bold;
   font-size: 14px;
@@ -1790,7 +1999,7 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   padding-bottom: 10px;
   text-align: left;
 }
-/* line 1377, ../compass/sass/responsive-estils.scss */
+/* line 1526, ../compass/sass/responsive-estils.scss */
 #boxInfoVideo .descarrega {
   font-weight: bold;
   font-size: 12px;
@@ -1802,23 +2011,23 @@ div#slideshow div#slide-holder div#slide-controls div#slide-nav a:hover {
   padding-top: 15px;
   background: url(../UserFiles/Image/iconos/icono-tv.png) no-repeat right top transparent;
 }
-/* line 1383, ../compass/sass/responsive-estils.scss */
+/* line 1532, ../compass/sass/responsive-estils.scss */
 #boxInfoVideo a {
   display: block;
   text-decoration: none;
   color: #504F4F;
   font-weight: bold;
 }
-/* line 1388, ../compass/sass/responsive-estils.scss */
+/* line 1537, ../compass/sass/responsive-estils.scss */
 #boxInfoVideo a:hover {
   text-decoration: underline;
 }
-/* line 1391, ../compass/sass/responsive-estils.scss */
+/* line 1540, ../compass/sass/responsive-estils.scss */
 #boxInfoVideo a:last-child .descarrega {
   border-bottom: none;
 }
 @media only screen and (min-width: 48em) {
-  /* line 1364, ../compass/sass/responsive-estils.scss */
+  /* line 1513, ../compass/sass/responsive-estils.scss */
   #boxInfoVideo {
     text-align: justify;
   }
