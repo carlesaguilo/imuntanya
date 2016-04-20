@@ -13,6 +13,9 @@
 			3.1.1 - Slideshow
 		3.2 - Interiors
 			3.2.1 - Productes
+		3.3 - Videos
+		3.4 - Novetats
+		4.5 - Contacte
 	4 - FOOTER
 		4.1 - Contactar
 		4.2 - On Som
@@ -32,7 +35,7 @@
 /* !#333333 NEGRE */
 /* !$colGrisFosc GRIS FOSC */
 /* !$colGrisClar GRIS CLAR */
-/* !#9C9C9C BLAU */
+/* !$colTaca BLAU */
 
 
 /*****************************/
@@ -198,6 +201,9 @@
 	#all {
 		@extend .container;
 		text-align: left;
+	}
+	strong {
+		font-weight: bold;
 	}
 /*---------------------------------------------- */
 
@@ -606,7 +612,7 @@
 			}
 			.dataNoticia {
 				@include lletra(bold, 1.2, 1.2em);
-				color: #9c9c9c;
+				color: $colTaca;
 				text-align: right;
 			}
 			.imatgeNoticia {
@@ -982,8 +988,7 @@
 			border:1px solid $colGrisFosc;
 			h4 {
 				position:absolute;
-				top:145px;
-				left:0;
+				top:145px;	left:0;
 				width:100%;
 				height:16px;
 				span {
@@ -994,11 +999,15 @@
 					color:#fff;
 					letter-spacing:0;
 					background: $colNegre;
-					background:rgba($colNegre,0.5);
+					background:rgba(3,3,3,0.5);
 					padding:10px;
 				}
 			}
 		}		
+		.caixaimage {
+			width: 230px;
+			margin: 0 auto 1em auto;
+		}
 		// 768 pixels
 		@include breakpoint (p768) {
 			@include box-sizing(border-box);
@@ -1025,13 +1034,12 @@
 				float:left;
 				padding-left:(8px / 960px ) * 100%;
 				padding-top:10px;
+				margin: 0;
 			}
 			.menuDretaContact {
 				float:left;
-				padding-left:(10px / 960px ) * 100%;
-			}
-			.image {
-				width:(230px/ 960px ) * 100%;
+				margin-left:(10px / 960px ) * 100%;
+				width: 43%;
 			}
 		}
 		// 980 pixels
@@ -1074,11 +1082,12 @@
 		border: 1px solid $colGrisFosc;
 		padding: 10px;
 		margin-bottom: 20px;
-		height: 155px;
+		overflow: hidden;
+		// height: 155px;
 		h3 {
 			@include lletra(bold, 1.4, 1.2em);
 			color: $colVerdFosc;
-			margin-bottom: 10px;
+			// margin-bottom: 10px;
 		}
 		a {
 			img {
@@ -1116,19 +1125,37 @@
 		}
 		// 768 pixels
 		@include breakpoint (p768) {
-			width: (693 / 960) * 100%;		
+			@include box-sizing(border-box);
+			width: 100%;		
 		}
 		
 	}
 	.slides_container {
-    	width: 693px;
-        height: 88px;
+    	width: 246px;
          div {
-	     	width: 693px;
-	        height: 88px;
+	     width: 246px;
 	        display:block;
 	        text-align: center;
+	        a {
+		        margin-top: 10px;
+	        }
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			width: 	536px;
+			div {
+				width: 536px;
 			}
+		}
+		
+		// 980 pixels
+		@include breakpoint (p980) {
+			width: 693px;
+			div {
+				width: 693px;
+			}
+		}
+		
     }
 	#galeria2 {
 		background-color: $colGrisClar;
@@ -1187,7 +1214,172 @@
 			}
 		}
 	}
-
+// !3.3 - Videos
+	#video {
+		// 768 pixels
+		@include breakpoint (p768) {
+			width: 768px - 200px - 45px;
+			float: left;			
+		}
+		// 980 pixels
+		@include breakpoint (p980) {
+			width: 688px;
+		}
+		
+	}
+	object, iframe {
+		width: 100%;
+		height: 200px; height: 62.5vw;
+		// 768 pixels
+		@include breakpoint (p768) {
+			height: 335px;
+		}
+		// 980 pixels
+		@include breakpoint (p980) {
+			height: 420px;	
+		}
+	}
+	#menuVideos {
+		width:200px;
+		padding-top:40px;
+		margin: 40px auto;
+		h2 {
+			font-size:16px;
+			padding-bottom:10px;
+		}
+		.primerespai {
+			border-bottom:1px solid #E4E4E4;
+			margin-bottom:4px;
+		}
+		.video {
+			border-bottom:1px solid #E4E4E4;
+			padding-bottom:14px;
+			margin-top:12px;
+		}
+		img {
+			float:left;
+			margin-right:5px;
+		}
+		h3 {
+			margin-top:0;
+			padding-top:0;
+			font-size:13px;
+			color:$colVerdFosc;
+			font-weight:700;
+			line-height:15px;
+			a {
+				text-decoration:none;
+				color:$colVerdFosc;
+				&:hover {
+					color: $colNegre;
+				}
+			}
+		}
+		p {
+			font-size:12px;
+			color:#303030;
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			float:left;	
+			margin: 40px 0 40px 25px;
+		}
+	}
+// !3.4 - Novetats
+	#llistaNoticies {
+		padding-top:10px;
+	//	width:220px;
+		.dataNoticia {
+			color:$colTaca;
+			font-weight:bold;
+			font-size:14px;
+			border-top:1px solid $colGrisFosc;
+		//	width:220px;
+		}
+		h3 {
+			color:$colVerdClar;
+			font-weight:bold;
+			font-size:16px;
+			a {
+				text-decoration:none;
+				color:$colVerdFosc;
+				font-weight:bold;
+				&::hover {
+					text-decoration:underline;
+				}
+			}
+		}
+		span {
+			font-size:12px;
+			color:$colNegre;
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+					
+		}
+	}
+// !3.5 - Contacte
+	#bodyPrincipal .menuEsquerraContact {
+	    padding-right: 10px;
+	    // 768 pixels
+	    @include breakpoint (p768) {
+	    	width: (520 / 960) * 100%;
+	    	float: left;		
+	    }
+	}
+	#contacte {
+		.mapes {
+			@include lletra(normal, 1.4, 1.5em);
+			color: $colNegre;
+			margin-bottom: 2em;
+			iframe {
+				 height: 174px;
+				border: 1px solid $colGrisFosc; padding: 1px;
+			}	
+		}
+		.linkEsquerra {
+			@include box-sizing(border-box);
+			@include lletra(bold, 1.4, 1.5em);
+			float:left; 
+			width:36%; 
+			background-color:$colGrisClar; 
+			padding:6px; 
+			color:$colNegre; 
+		}	
+		.linkDreta {
+			@include box-sizing(border-box);
+			@include lletra(bold, 1.4, 1.5em);
+			float:left; 
+			width:60%; 
+			padding:6px; 
+			margin-left:4%; 
+			color:$colVerdFosc; 
+			a {
+				color:$colVerdFosc; 
+				text-decoration:none;
+				&:hover{
+					text-decoration:underline;
+				}	
+			}	
+		}	
+		.linkSeparador {
+			clear:both;
+		}	
+		// 980 pixels
+		@include breakpoint (p980) {
+			.mapes {
+				float: left;
+				margin-right:20px;
+				margin-bottom: 0;
+				iframe {
+					margin-left: 20px;
+					width: 276px;
+				}
+			}	
+				
+		}
+		
+ 	}
 /*---------------------------------------------- */
 
 /*---------------------------------------------- */
@@ -1440,7 +1632,7 @@
 			background-color: transparent;		
 		}
 		button {
-			@include lletra(bold, 14,1em);
+			@include lletra(bold, 1.4,1em);
 			@include transition (background-color, 0.2s, ease-in-out);
 			color: $colBlanc;
 			border: 1px solid $colVerdFosc;
@@ -1549,3 +1741,113 @@
 	}
 
 // !6.1 - Formulari Gran
+	#formInfoGran {
+		padding-bottom: 10px;
+		margin: 0 auto 20px auto;
+		width: 100%;
+		max-width: 480px;
+		&, input {
+			border: 1px solid #c9c9c9;
+		}
+		h3 {
+			@include lletra(bold, 1.6, 1.5em);
+			color: #ffffff;
+			background-color: $colNegre;
+			padding: 8px 10px 3px 10px;
+			letter-spacing: 1px;
+			margin-bottom: 10px;
+		}
+		p {
+			padding: 0 10px;
+		}
+		label, input {
+			@include lletra(bold, 1.2, 1.5em);
+			display: block;
+		}
+		 label {
+			text-transform: lowercase;
+		}
+		input {
+			@include box-sizing(border-box);
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 3px 2px;
+			font-weight: normal;
+		}
+		textarea {
+			@include lletra(bold, 1.2, 1.5em);
+			@include box-sizing(border-box);
+		    border: 1px solid #c9c9c9;
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 3px 2px;
+			font-weight: normal;
+		}
+		.obligatori {
+			color: red;
+		}
+		 select {
+			@include lletra(normal, 1.2, 1.5em);
+			margin: 0px 10px;
+			width: 200px;
+			border: 1px solid #c9c9c9;
+			padding: 2px 3px;
+			height: 27px;
+			background-color: transparent;		
+		}
+		button {
+			@include lletra(bold, 1.4, 1em);
+			color: #ffffff;
+			border: 1px solid $colVerdFosc;
+			background-color: $colVerdFosc;
+			text-transform: lowercase;
+			width: 77px; height: 30px;
+			float: right;
+			margin-top: 35px; margin-right: 10px;
+			cursor: pointer;
+			&:hover {
+				@include transition(background-color 0.2s ease-in-out);
+				background-color: $colVerdClar;
+				color: $colNegre;
+			}
+		}
+		// 768 pixels
+		@include breakpoint (p768) {
+			width: 100%;
+		}
+		
+	}
+
+	#formSendPdf {	}
+	#formSendPdf,
+	#formSendPdf input {	}
+	#formSendPdf label,
+	#formSendPdf input {
+		font: bold 12px/1.5em Arial; 
+	}
+	#formSendPdf label {
+	    margin-top: 10px;
+	}
+	#formSendPdf input {
+		width: 195px;
+		margin-bottom: 7px;
+		padding: 1px 1px;
+		font-weight: normal;
+	}
+	#formSendPdf button {
+		color: #ffffff;
+		border: 1px solid $colVerdFosc;
+		background-color: $colVerdFosc;
+		font: bold 11px/1.0em Arial;
+		text-transform: lowercase;
+		width: 77px; height: 24px;
+		float: right;
+		margin-top: 0px; 
+		cursor: pointer;
+	}
+	#formSendPdf button:hover {
+		@include transition(background-color 0.2s ease-in-out);
+		background-color: $colVerdClar;
+		color: $colNegre;
+	}
