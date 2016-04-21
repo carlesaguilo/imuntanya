@@ -1,4 +1,4 @@
-	<div id="footer">
+	<footer id="footer">
 	   <?php $n = $nodesFoodWeb->offsetGet(1);
 	       	 $c = $n->get_ContenidoS()->offsetGet(1);  
 	       	 echo $c->get_CODIHTML();              

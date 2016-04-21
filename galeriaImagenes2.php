@@ -1,6 +1,6 @@
 	<?php if ($grupoFila1->count()>1){ ?>
 	<div id="galeria">
-		<h3><?php $a = $grupoFila1->offsetGet(1); echo $a->get_LINK();?></h3>
+		<h3><?php $a = $grupoFila1->offsetGet(1); echo utf8_decode($a->get_LINK());?></h3>
 		<div id="slides1">
             <div class="slides_container">
             <?php for ($i = 1; $i < $grupoFila1->count(); $i++) { $a = $grupoFila1->offsetGet($i);
@@ -15,7 +15,7 @@
 	
 	<?php if ($grupoFila2->count()>1){ ?>
 	<div id="galeria">
-		<h3><?php $a = $grupoFila2->offsetGet(1); echo $a->get_LINK();?></h3>
+		<h3><?php $a = $grupoFila2->offsetGet(1); echo utf8_decode($a->get_LINK());?></h3>
 		<div id="slides2">
             <div class="slides_container">
             <?php for ($i = 1; $i < $grupoFila2->count(); $i++) { $a = $grupoFila2->offsetGet($i);
@@ -30,7 +30,7 @@
 	
 	<?php if ($grupoFila3->count()>1){ ?>
 	<div id="galeria">
-		<h3><?php $a = $grupoFila3->offsetGet(1); echo $a->get_LINK();?></h3>
+		<h3><?php $a = $grupoFila3->offsetGet(1); echo utf8_decode($a->get_LINK());?></h3>
 		<div id="slides3">
             <div class="slides_container">
             <?php for ($i = 1; $i < $grupoFila3->count(); $i++) { $a = $grupoFila3->offsetGet($i);
@@ -45,7 +45,7 @@
 	
 	<?php if ($grupoFila4->count()>1){ ?>
 	<div id="galeria">
-		<h3><?php $a = $grupoFila4->offsetGet(1); echo $a->get_LINK();?></h3>
+		<h3><?php $a = $grupoFila4->offsetGet(1); echo utf8_decode($a->get_LINK());?></h3>
 		<div id="slides4">
             <div class="slides_container">
             <?php for ($i = 1; $i < $grupoFila4->count(); $i++) { $a = $grupoFila4->offsetGet($i);
@@ -60,7 +60,7 @@
 	
 	<?php if ($grupoFila5->count()>1){ ?>
 	<div id="galeria">
-		<h3><?php $a = $grupoFila5->offsetGet(1); echo $a->get_LINK();?></h3>
+		<h3><?php $a = $grupoFila5->offsetGet(1); echo utf8_decode($a->get_LINK());?></h3>
 		<div id="slides5">
             <div class="slides_container">
             <?php for ($i = 1; $i < $grupoFila5->count(); $i++) { $a = $grupoFila5->offsetGet($i);
@@ -75,7 +75,7 @@
 	
 	<?php if ($grupoFila6->count()>1){ ?>
 	<div id="galeria">
-		<h3><?php $a = $grupoFila6->offsetGet(1); echo $a->get_LINK();?></h3>
+		<h3><?php $a = $grupoFila6->offsetGet(1); echo utf8_decode($a->get_LINK());?></h3>
 		<div id="slides6">
             <div class="slides_container">
             <?php for ($i = 1; $i < $grupoFila6->count(); $i++) { $a = $grupoFila6->offsetGet($i);

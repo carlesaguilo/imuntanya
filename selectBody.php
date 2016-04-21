@@ -1,5 +1,4 @@
-<tr>
-<td align="center"> 
+ 
 <?php
     //Seleccionem el body segons la zona
     switch ($node->get_ZONA()){
@@ -32,5 +31,4 @@
 		   include_once $_SESSION["PATH_WEB"].'/templates/'.$plantilla.'/body.php';
     }      
 ?>    
-    </td>
-  </tr>
+  

@@ -15,7 +15,8 @@
 			3.2.1 - Productes
 		3.3 - Videos
 		3.4 - Novetats
-		4.5 - Contacte
+		3.5 - Contacte
+		3.6 - Site map
 	4 - FOOTER
 		4.1 - Contactar
 		4.2 - On Som
@@ -45,7 +46,7 @@
 	@import "compass/css3";
 	
 /* !VARIABLES */
-	$fontText: Arial, sans-serif;;
+	$fontText: Arial, sans-serif;
 	$strIcones: url('/templates/imuntanya/UserFiles/Image/principal/icones.svg');
 	
 //  !Z-INDEX
@@ -259,6 +260,7 @@
 		display: block;
 		margin-top: 13px;
 		text-align: center;
+		text-transform: lowercase;
 		li {
 			@include inline-block();
 			margin-left: 6px;
@@ -299,13 +301,18 @@
 	}
 // !2.2 - Coordenades
 	.coordenades {
+		@include lletra(bold, 1.6, 1.2em);
 		color: $colTaca;
 		margin-top: 20px;
 		p {
-			
-			padding: 3px 0 3px 25px;
+			padding: 3px 0 3px 0px;
 			margin-left: 25px;
-			background: $strIcones no-repeat 0 0 transparent;
+			&:before {
+				@include inline-block();
+				text-indent: -1000em;
+				width: 25px; height: 20px;
+				background: $strIcones no-repeat 0 0 transparent;
+			}
 		}
 		a {
 			@include transition(color .25s ease-in);
@@ -317,16 +324,24 @@
 			}
 		}
 		.emilio {
-			@include lletra(bold, 1.2, 1.2em);
-			background-position: left 3px;
+			&:before {
+				content: 'mail';
+				background-position: left 0px;
+			}
+			a {
+				unicode-bidi:bidi-override; direction: rtl;
+			}
 		}
 		.telf {
-			@include lletra(bold, 1.4, 1.2em);
-			background-position: 0 -25px;
+			&:before {
+				content: 'phone';
+				background-position: 0 -29px;
+			}
 		}
 		
 		// 768 pixels
 		@include breakpoint (p768) {
+			@include lletra(bold, 1.4, 1.2em);
 			float: right;
 			clear: right;
 			margin-right: 10px; margin-bottom: 81px;
@@ -350,7 +365,8 @@
 		margin-top: 20px;
 		a {
 			height: 15px; width: 22px;
-			background: $strIcones -15px -510px;
+			line-height: 16px;
+			background: $strIcones -15px -504px;
 			text-decoration: none;
 			color: $colGrisFosc;
 			display: block;
@@ -420,7 +436,10 @@
 				@include transition (all .25s ease-in);
 				color: $colBlanc;
 				background-color: $colVerdFosc;
-				padding: 5px 7px 0 7px;
+				padding: 3px 5px 0 5px;
+				span {
+					padding-bottom: 3px;
+				}
 				&:hover {
 					background-color: $colNegre;
 					span {
@@ -442,7 +461,7 @@
 			height: auto;
 			clear: both;	
 			& > li {
-				margin-left: 30px;
+				margin-left: 25px;
 				float: left;
 				a {
 					padding-left: 0;
@@ -562,7 +581,7 @@
 		
 	}
 	.pestanya {
-		@include lletra(normal,1.4,1.4em);
+		@include lletra(normal,1.6,1.4em);
 		width: 100%;
 		max-width: 480px;
 		margin: 0px auto 2em auto;
@@ -579,7 +598,7 @@
 			margin-bottom: 1em;
 		}
 		.readMore {
-			@include lletra(bold, 1.2, 1.3em);
+			@include lletra(bold,1.4,1.4em);
 			text-align: right;
 			margin-left: 20px;
 		}
@@ -628,6 +647,7 @@
 		
 		// 768 pixels
 		@include breakpoint (p768) {
+			@include lletra(normal,1.4,1.4em);
 			float: left;
 			width: (310px / 960px) * 100%;
 			margin-left: (15px / 960px) * 100%;	
@@ -645,6 +665,9 @@
 						width: 100%; height: auto;
 					}
 				}
+			}
+			.readMore {
+				@include lletra(bold, 1.2, 1.3em);
 			}
 		}
 		// 980 pixels
@@ -673,8 +696,11 @@
 		
 	}
 	#main2 div.wrap {
-		width: 715px;
+		// 768 pixels
+		@include breakpoint (p768) {
+			width: 715px;			
 		}
+	}
 	
 	div#top div#nav {
 		float:left;
@@ -945,19 +971,26 @@
 		}
 		h2 {
 			@include lletra(bold, 2.1, 1.2em);
-			color: $colNegre;
+			color: $colVerdFosc;
+			margin: 1em 0;
 		}
 		h3 {
 			@include lletra(bold, 1.3, 1.2em);
 			color: $colNegre;
 			padding:7px;
 			background-color: $colGrisClar;
-			margin-bottom:10px;
+			margin-bottom:1em;
 		}
 		.menuEsquerra {
 			text-align:left;
 			h1 {
 				color: $colNegre;
+			}
+			p, ul, ol {
+				margin-bottom: 1em;
+			}
+			li {
+				margin-bottom: .5em;
 			}
 		}
 		.menuDreta {
@@ -1380,6 +1413,37 @@
 		}
 		
  	}
+// !3.6 - Sitemap
+	#sitemap {
+		margin-left:5%; margin-top: 2em;
+		border-left: 1px solid $colVerdClar;
+		padding: 10px 20px;
+		h1 {
+			@include lletra(bold, 2.2,1.5em);
+			margin: .5em 0 1em 0;
+			color: $colVerdFosc;
+		}
+		h2 {
+			@include lletra(bold, 1.6,1.5em);
+			margin:1em 0;
+		}
+		ul {
+			padding-left:20px;
+			padding-top:10px;
+			
+		}
+		
+		a {
+			@include transition (color .25s ease-in-out);
+			text-decoration:none;
+			color:$colNegre;
+			&:hover {
+				text-decoration:underline;
+				color:$colVerdFosc;
+			}
+		}
+	}
+
 /*---------------------------------------------- */
 
 /*---------------------------------------------- */
@@ -1405,17 +1469,20 @@
 			border-bottom: 1px solid $colGrisFosc;
 			margin-bottom: 30px;
 			background: $strIcones no-repeat -20px -84px transparent;
-		}
-		.quadreContacte.quadreEmilio {
-			background-position: -20px -285px;
-		}
-		.quadreContacte.quadreEmilio a {
-			color: $colVerdFosc;
-			font-weight: bold;
-		}
-		.quadreContacte.quadreEmilio a:hover {
-			color: $colTaca;
-			text-decoration: underline;
+			a {
+				color: $colVerdFosc;
+			}
+			&.quadreEmilio {
+				background-position: -20px -285px;
+				a {
+					color: $colVerdFosc;
+					font-weight: bold;
+					&:hover {
+						color: $colTaca;
+						text-decoration: underline;
+					}
+				}
+			}
 		}
 /* !4.2 - On Som */
 		.onSom iframe {
@@ -1445,12 +1512,16 @@
 		}
 		.linksSocials li {
 			background: $strIcones no-repeat -19px -380px transparent;
+			line-height: 27px;
 		}
 		.linksSocials li.linkedin {
 			background-position: -19px -329px;
 		}
 		.linksSocials li.instagram {
-			background-position: -19px -437px;
+			background-position: -19px -435px;
+		}
+		.linksSocials li.facebook {
+			background-position: -15px -565px;
 		}
 /* !4.4 - Copyright */
 		.copyright {
@@ -1659,6 +1730,9 @@
 		h2 {
 			@include lletra(bold, 1.8, 1.3em);
 			text-align: left; 
+		}
+		p {
+			margin-bottom: 1em;
 		}
 		// 768 pixels
 		@include breakpoint (p768) {
