@@ -4,14 +4,15 @@
         
         <?php if ($adjuntoCatalogo !=""){ ?>
         <?php for ($i = 1; $i < $adjuntoCatalogo->count(); $i++) { $a = $adjuntoCatalogo->offsetGet($i); ?>
-        <a title="<?php echo $a->get_NOM();?>" href="<?php echo $a->get_LINK();?>">
+        
         <div class="caixaimage">
           <div class="image">
-              <img src="<?php echo $a->get_FITXER();?>" alt="<?php echo $a->get_NOM();?>" >
+              <img src="<?php echo $a->get_FITXER();?>" alt="<?php echo $a->get_NOM();?>" />
               <h4><span><?php echo $a->get_NOM();?>  </span></h4>
           </div>
+          <a title="<?php echo $a->get_NOM();?>" href="<?php echo $a->get_LINK();?>"><span><?php echo $a->get_NOM();?></span></a>
         </div>
-        </a>
+        
         <?php }?>
        <?php }?>
   

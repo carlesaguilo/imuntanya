@@ -1,5 +1,5 @@
 		<!-- SLIDESHOW -->
-		<div id="slideshow">
+		<div id="slideshow" class="slideInterior">
   			<div class="wrap">
   			  <div id="slide-holder">
   			    <div id="slide-runner"> 

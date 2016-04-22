@@ -47,7 +47,7 @@
 	
 /* !VARIABLES */
 	$fontText: Arial, sans-serif;
-	$strIcones: url('/templates/imuntanya/UserFiles/Image/principal/icones.svg');
+	$strIcones: url('/templates/imuntanya/UserFiles/Image/principal/icones2.png');
 	
 //  !Z-INDEX
 	$zmodal: 9000;
@@ -292,6 +292,9 @@
 			@include lletra(bold, 1, 1em);
 			float: right;
 			margin-right: 10px;
+			a {
+				padding: 1px 5px 3px 5px;
+			}
 		}
 		// 980 pixels
 		@include breakpoint (p980) {
@@ -326,7 +329,7 @@
 		.emilio {
 			&:before {
 				content: 'mail';
-				background-position: left 0px;
+				background-position: left 2px;
 			}
 			a {
 				unicode-bidi:bidi-override; direction: rtl;
@@ -335,7 +338,7 @@
 		.telf {
 			&:before {
 				content: 'phone';
-				background-position: 0 -29px;
+				background-position: 0 -24px;
 			}
 		}
 		
@@ -364,7 +367,7 @@
 		padding: 8px 0;
 		margin-top: 20px;
 		a {
-			height: 15px; width: 22px;
+			height: 16px; width: 22px;
 			line-height: 16px;
 			background: $strIcones -15px -504px;
 			text-decoration: none;
@@ -1019,6 +1022,8 @@
 		.image {
 			position:relative;
 			border:1px solid $colGrisFosc;
+			line-height: 0;
+			overflow: hidden;
 			h4 {
 				position:absolute;
 				top:145px;	left:0;
@@ -1040,6 +1045,17 @@
 		.caixaimage {
 			width: 230px;
 			margin: 0 auto 1em auto;
+			position: relative;
+			a {
+				display: block;
+				position: absolute;
+				z-index: $zmodal - 1;
+				width: 100%; height: 100%;
+				top: 0; left: 0; right: 0; bottom: 0;
+				span {
+					@extend .amagar;
+				}
+			}
 		}
 		// 768 pixels
 		@include breakpoint (p768) {
@@ -1511,17 +1527,17 @@
 			}
 		}
 		.linksSocials li {
-			background: $strIcones no-repeat -19px -380px transparent;
+			background: $strIcones no-repeat -17px -374px transparent;
 			line-height: 27px;
 		}
 		.linksSocials li.linkedin {
-			background-position: -19px -329px;
+			background-position: -18px -325px;
 		}
 		.linksSocials li.instagram {
-			background-position: -19px -435px;
+			background-position: -17px -435px;
 		}
 		.linksSocials li.facebook {
-			background-position: -15px -565px;
+			background-position: -18px -565px;
 		}
 /* !4.4 - Copyright */
 		.copyright {
@@ -1755,6 +1771,7 @@
 			@include lletra(bold, 1.2, 1.5em);
 			border-bottom:1px solid $colGrisFosc;
 			padding-bottom:15px;
+			text-align: left;
 			padding-top:15px;
 			background:url(../UserFiles/Image/iconos/icono-pdf.png) no-repeat right center transparent;
 		}
@@ -1791,9 +1808,8 @@
 		}
 		.descarrega {
 			@include lletra(bold, 1.2, 1.5em);
-			padding-bottom:15px;
-			padding-top:15px;
-			background:url(../UserFiles/Image/iconos/icono-tv.png) no-repeat right top transparent;
+			padding: 15px 25px 15px 0;
+			background:url(../UserFiles/Image/iconos/icono-tv.png) no-repeat right center transparent;
 		}
 		a {
 			display: block;
@@ -1807,11 +1823,6 @@
 				border-bottom: none;
 			}
 		}
-		// 768 pixels
-		@include breakpoint (p768) {
-			text-align: justify;		
-		}
-		
 	}
 
 // !6.1 - Formulari Gran
