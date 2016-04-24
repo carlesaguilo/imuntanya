@@ -22,12 +22,14 @@
 		4.2 - On Som
 		4.3 - Links Socials
 		4.4 - Copyright
+		4.5 - Cookies
 	5 - LEFT
 		5.1 - Menu
 	6 - RIGHT
 		6.1 - Formulari
 		6.2 - Descarregar
 		6.1 - Formulari Gran
+	7 - ARABIC
 *****************************/
 
 /* !COLORS */
@@ -145,6 +147,10 @@
 		left: -10000px;
 		height: 1px;
 		overflow: hidden;
+		&:lang(ar) {
+			left: auto;
+			right: -10000em;
+		}
 	}
 	
 	// La caixa per defecte
@@ -202,6 +208,9 @@
 	#all {
 		@extend .container;
 		text-align: left;
+		&:lang(ar) {
+			text-align: right;
+		}
 	}
 	strong {
 		font-weight: bold;
@@ -234,6 +243,10 @@
 			@include lletra (normal, 1.4, 1.1em);
 			color: $colTaca;
 			letter-spacing: 1px;
+			text-align: left;
+			&:lang(ar) {
+				text-align: right;
+			}
 		}
 		
 		// 768 pixels
@@ -245,6 +258,10 @@
 			img {
 				width: 354px; height: 66px;
 				max-width: none;
+			}
+			&:lang(ar) {
+				left: auto;
+				right: 10px;
 			}
 		}
 		// 980 pixels
@@ -295,10 +312,15 @@
 			a {
 				padding: 1px 5px 3px 5px;
 			}
+			&:lang(ar) {
+				float: left;
+				margin-right: 0; margin-left: 10px;
+			}
 		}
 		// 980 pixels
 		@include breakpoint (p980) {
 			margin-right: 0;			
+			margin-left: 0;
 		}
 				
 	}
@@ -310,6 +332,10 @@
 		p {
 			padding: 3px 0 3px 0px;
 			margin-left: 25px;
+			&:lang(ar) {
+				margin-left: 0;
+				margin-right: 25px,
+			}
 			&:before {
 				@include inline-block();
 				text-indent: -1000em;
@@ -322,7 +348,7 @@
 			text-decoration: none;
 			color: $colTaca;
 			&:hover {
-				text-decoration: underline;
+				text-decoration: none;
 				color: $colVerdFosc;
 			}
 		}
@@ -347,14 +373,19 @@
 			@include lletra(bold, 1.4, 1.2em);
 			float: right;
 			clear: right;
-			margin-right: 10px; margin-bottom: 81px;
+			margin-right: 10px; margin-bottom: 45px;
 			p {
 				float: left;
+			}
+			&:lang(ar) {
+				float: left;
+				clear: left;
+				margin: 20px 0 45px 10px;
 			}
 		}
 		// 980 pixels
 		@include breakpoint (p980) {
-			margin-right: 0;margin-bottom: 48px;
+			margin: 20px 0 48px 0;
 		}
 		
 	}
@@ -478,6 +509,11 @@
 						}
 					}
 				}
+				&:lang(ar) {
+					float: right;
+					margin-left: 0;
+					margin-right: 25px;
+				}
 			}
 		}
 		// 1200 pixels
@@ -538,13 +574,16 @@
 				position: absolute;
 				left: -10000px;
 				width: 390px;
+				&:lang(ar) {
+					left: auto;
+					right: -10000em;
+				}
 			}		
 			.parent:hover ul,
 			.parent.sfhover ul {
-				left: auto;
+				left: auto; right: auto;
 			}
 		}
-		
 	}
 
 /*---------------------------------------------- */
@@ -628,6 +667,9 @@
 			.titolNoticia {
 				@include lletra(bold, 1.8, 1.2em);
 				text-align: left;
+				&:lang(ar) {
+					text-align: right;
+				}
 				a {
 					text-decoration: none;
 				}
@@ -636,6 +678,9 @@
 				@include lletra(bold, 1.2, 1.2em);
 				color: $colTaca;
 				text-align: right;
+				&:lang(ar) {
+					text-align: left;
+				}
 			}
 			.imatgeNoticia {
 				border: 1px solid $colGrisClar;
@@ -742,6 +787,7 @@
 	div#slideshow {
 		position: relative;
 		overflow: hidden;
+		
 		img {
 			// 1200 pixels
 			@include breakpoint (p1200) {
@@ -920,7 +966,21 @@
 		cursor:pointer;
 	}
 	#contentarea {
+		@extend .aclarir;
 		position:relative;
+		h1 {
+			@include lletra(bold, 3, 1.2em);
+			color: $colVerdFosc;
+			margin: 1em auto;
+		}
+		h2 {
+			@include lletra(bold, 2.2, 1.2em);
+			color: $colVerdFosc;
+			margin: 1em auto;
+		}
+		p {
+			margin-bottom: 1em;
+		}
 	}
 // !3.2 - Interiors
 	#texte {
@@ -944,9 +1004,15 @@
 		li {
 			margin-bottom: .5em;
 		}
+		&:lang(ar) {
+			text-align: right;
+		}
 	}
 	#video p {
-		text-align: justify;
+		text-align: left;
+		&:lang(ar) {
+			text-align: right;
+		}
 	}
 	// 768 pixels
 	@include breakpoint (p768) {
@@ -954,6 +1020,9 @@
 			margin-bottom: 4em;
 			float: left;
 			width: (715px / 960px) * 100%;
+			&:lang(ar) {
+				float: right;
+			}
 		}		
 	}
 	// 980 pixels
@@ -962,11 +1031,19 @@
 			width: (445px / 715px) * 100%;
 			float: left;
 			margin-right: (45px / 715px) * 100%;
+			&:lang(ar) {
+				float: right;
+				margin-left: (45px / 715px) * 100%;
+				margin-right: 0;
+			}
 		}	
 	}
 	#bodyPrincipal {
 		@extend .container;
 		text-align:left;
+		&:lang(ar) {
+			text-align: right;
+		}
 		h1 {
 			@include lletra(bold, 3, 1.2em);
 			color: $colVerdFosc;
@@ -986,6 +1063,9 @@
 		}
 		.menuEsquerra {
 			text-align:left;
+			&:lang(ar) {
+				text-align: right;
+			}
 			h1 {
 				color: $colNegre;
 			}
@@ -1011,9 +1091,15 @@
 			padding-bottom:2px;
 			font-style:italic;
 			font-weight:bold;
+			&:lang(ar) {
+				padding: 2px 8px 2px 0;
+			}
 		}
 		.menuEsquerraContact {
 			text-align: left;
+			&:lang(ar) {
+				text-align: right;
+			}
 			padding-right:10px;
 			h1 {
 				color: $colNegre;
@@ -1049,7 +1135,7 @@
 			a {
 				display: block;
 				position: absolute;
-				z-index: $zmodal - 1;
+				z-index: 99;
 				width: 100%; height: 100%;
 				top: 0; left: 0; right: 0; bottom: 0;
 				span {
@@ -1066,18 +1152,30 @@
 				width:66%;
 				text-align:justify;			
 				margin-right: 3%;
+				&:lang(ar) {
+					float: right;
+					margin-right: 0;
+					margin-left: 3%;
+				}
 			}
 			.menuDreta {
 				float:left;
 				width:100% - 69%;
 				margin: 0;
 				max-width: none;
+				&:lang(ar) {
+					float: right;
+				}
 			}
 			.menuEsquerraContact {
 				float:left;
 				width:520px;
 				text-align:justify;
 				padding-right:10px;
+				&:lang(ar) {
+					float: right;
+					padding-right: 0; padding-left: 10px;
+				}
 			}
 			.caixaimage {
 				float:left;
@@ -1097,6 +1195,10 @@
 			.menuEsquerra {
 				width:(716px / 960px) * 100%;
 				margin-right: (20px / 960px ) * 100%;
+				&:lang(ar) {
+					margin-right: 0;
+					margin-left: (20px / 960px ) * 100%;
+				}
 			}
 			.menuDreta {
 				width: (224px / 960px ) * 100%;
@@ -1170,8 +1272,10 @@
 					color: $colNegre;
 				}
 			}
-
 		}
+		&:lang(ar) #slides {
+			direction: ltr;
+		} 
 		// 768 pixels
 		@include breakpoint (p768) {
 			@include box-sizing(border-box);
@@ -1269,6 +1373,9 @@
 		@include breakpoint (p768) {
 			width: 768px - 200px - 45px;
 			float: left;			
+			&:lang(ar) {
+				float: right;
+			}
 		}
 		// 980 pixels
 		@include breakpoint (p980) {
@@ -1332,6 +1439,10 @@
 		@include breakpoint (p768) {
 			float:left;	
 			margin: 40px 0 40px 25px;
+			&:lang(ar) {
+				float: right;
+				margin: 40px 25px 40px 0;
+			}
 		}
 	}
 // !3.4 - Novetats
@@ -1484,12 +1595,28 @@
 			padding: 0px 5px 10px 25px;
 			border-bottom: 1px solid $colGrisFosc;
 			margin-bottom: 30px;
-			background: $strIcones no-repeat -20px -84px transparent;
+			position: relative;
+			&:before {
+				background: $strIcones no-repeat -20px -84px transparent;
+				display: block;
+				content: " ";
+				position: absolute;
+				left: 0; top: 0px;
+				width: 20px; height: 30px;
+				.rtlVersion & {
+				
+					left: auto;
+					right: 0;
+				}
+			}
+			
 			a {
 				color: $colVerdFosc;
 			}
 			&.quadreEmilio {
-				background-position: -20px -285px;
+				&:before {	  
+					background-position: -20px -285px;
+				}
 				a {
 					color: $colVerdFosc;
 					font-weight: bold;
@@ -1498,10 +1625,18 @@
 						text-decoration: underline;
 					}
 				}
+				&:lang(ar) {
+					background-position: 200px -285px;
+				}
 			}
+			&:lang(ar) {
+				padding: 0 25px 10px 5px;
+			}
+			
 		}
 /* !4.2 - On Som */
 		.onSom iframe {
+			@include box-sizing(border-box);
 			border: 1px solid $colGrisFosc; padding: 1px;
 			max-width: 100%;
 		}
@@ -1509,35 +1644,45 @@
 		.terceraPestanya {
 			@include lletra(bold, 1.2, 1.4em);
 			text-align: left;
+			&:lang(ar) {
+				text-align: right;
+			}
 			a {
 				color: $colNegre;
+				padding: 0 10px;
 				&:hover {
-					text-decoration: underline;
-					color: $colTaca;
+					color: $colVerdFosc;
 				}
 			}
 			ul {
 				margin-left: 12px;
 			}
 			li {
-				padding: 5px 5px 5px 30px;
-			border-bottom: 1px solid $colGrisFosc;
-			margin-bottom: 20px;
+				// padding: 5px 5px 5px 30px;
+				padding: 5px;
+				border-bottom: 1px solid $colGrisFosc;
+				margin-bottom: 20px;
 
 			}
 		}
-		.linksSocials li {
-			background: $strIcones no-repeat -17px -374px transparent;
+		.linksSocials li:before {
+			@include inline-block();
+			background: $strIcones no-repeat -17px -378px transparent;
 			line-height: 27px;
+			content: " ";
+			height: 27px; width: 27px;
 		}
-		.linksSocials li.linkedin {
-			background-position: -18px -325px;
+		.linksSocials li.linkedin:before {
+			background-position: -18px -329px;
 		}
-		.linksSocials li.instagram {
-			background-position: -17px -435px;
+		.linksSocials li.instagram:before {
+			background-position: -17px -439px;
 		}
-		.linksSocials li.facebook {
-			background-position: -18px -565px;
+		.linksSocials li.facebook:before {
+			background-position: -18px -569px;
+		}
+		.linksSocials li.googleplus:before {
+			background-position: -13px -651px;
 		}
 /* !4.4 - Copyright */
 		.copyright {
@@ -1551,11 +1696,16 @@
 
 		// 768 pixels
 		@include breakpoint (p768) {
+			width: 748px;
 			padding: 20px 10px;
 			.contactar {
 				width: (310px / 960px) * 100%;
 				margin-left: 0;
 				float: left;
+				&:lang(ar) {
+					float: right;
+					margin-right: 0;
+				}
 			}	
 			.onSom {
 				float: left;
@@ -1565,16 +1715,37 @@
 					margin-left: 0px;
 					width: 100%; height: 174px;
 				}
+				&:lang(ar) {
+					float: right;
+					margin-left: 0;
+					margin-right: (15px / 960px) * 100%;
+				}
 			}
 			.terceraPestanya {
 				float: left;
 				width: (310px / 960px) * 100%;
 				margin-left: (15px / 960px) * 100%;
+				&:lang(ar) {
+					float: right;
+					margin-left: 0;
+					margin-right: (15px / 960px) * 100%;
+				}
+
 			}		
+			div.wrap {
+				width: 748px;
+			}
+			
+		}
+		// 980 pixels
+		@include breakpoint (p980) {
+			width: 920px;	
+			padding: 20px;		
 		}
 	}
 	#webcreator {
 		@include lletra(normal, 1, 1.2em);
+		padding: 20px 10px;
 		color: $colGrisLletra;
 		padding-top:10px;
 		a {
@@ -1585,7 +1756,23 @@
 			}
 		}
 }
-
+// !4.5 - Cookies
+	.cc_banner-wrapper {
+		.cc_container {
+			font-size: 14px;
+			font-size: 1.4rem;
+			line-height: 1.2em;
+			background-color: $colGrisFosc;
+			color: $colNegre;
+			a, a:visited {
+				color: $colVerdFosc;
+			}
+			.cc_btn {
+				background-color: $colVerdFosc;
+				color: $colBlanc;
+			}
+		}
+	}
 
 /*---------------------------------------------- */
 
@@ -1599,6 +1786,9 @@
 			text-align: left;
 			padding: 48px 10px 8px 10px;
 			margin-bottom: 10px;
+			&:lang(ar) {
+				text-align: right;
+			}
 		}
 		// 768 pixels
 		@include breakpoint (p768) {
@@ -1606,11 +1796,20 @@
 			float: left;
 			width: (225 / 960) * 100%;	
 			margin-right: (20 / 960) * 100%;	
+			&:lang(ar) {
+				float: right;
+				margin-right: 0;
+				margin-left: (20 / 960) * 100%;
+			}
 		}
 		// 980 pixels
 		@include breakpoint (p980) {
 			width: (205 / 960) * 100%;	
-			margin-right: (40 / 960) * 100%;	
+			margin-right: (40 / 960) * 100%;
+			&:lang(ar) {
+				margin-right: 0;
+				margin-left: (40 / 960) * 100%;
+			}
 		}
 		
 	}
@@ -1675,7 +1874,7 @@
 	#formInfo {
 		padding-bottom: 10px;
 		margin-bottom: 20px;
-		input, & {
+		input, textarea, & {
 			border: 1px solid $colGrisFosc;
 		}
 		h3 {
@@ -1698,7 +1897,7 @@
 		label {
 			text-transform: lowercase;
 		}
-		input {
+		input, textarea {
 			@include box-sizing(border-box);
 			width: 100%;
 		//	width: 195px;
@@ -1743,9 +1942,15 @@
 		color:$colGrisLletra;
 		text-align: left;
 		padding:10px;
+		&:lang(ar) {
+			text-align: right;
+		}
 		h2 {
 			@include lletra(bold, 1.8, 1.3em);
 			text-align: left; 
+			&:lang(ar) {
+				text-align: right;
+			}
 		}
 		p {
 			margin-bottom: 1em;
@@ -1766,6 +1971,9 @@
 			@include lletra(bold, 1.4, 1.7em);
 			text-align: left;
 			padding-bottom: 10px;
+			&:lang(ar) {
+				text-align: right;
+			}
 		}
 		.descarrega {
 			@include lletra(bold, 1.2, 1.5em);
@@ -1774,6 +1982,10 @@
 			text-align: left;
 			padding-top:15px;
 			background:url(../UserFiles/Image/iconos/icono-pdf.png) no-repeat right center transparent;
+			&:lang(ar) {
+				text-align: right;
+				background-position: left center;
+			}
 		}
 		a {
 			text-decoration:none;
@@ -1805,11 +2017,19 @@
 			@include lletra(bold, 1.4, 1.7em);
 			padding-bottom: 10px;
 			text-align: left;
+			&:lang(ar) {
+				text-align: right;
+			}
 		}
 		.descarrega {
 			@include lletra(bold, 1.2, 1.5em);
 			padding: 15px 25px 15px 0;
 			background:url(../UserFiles/Image/iconos/icono-tv.png) no-repeat right center transparent;
+			&:lang(ar) {
+				text-align: right;
+				background-position: left center;
+				padding: 15px 0 15px 25px;
+			}
 		}
 		a {
 			display: block;
@@ -1936,3 +2156,11 @@
 		background-color: $colVerdClar;
 		color: $colNegre;
 	}
+	
+/*---------------------------------------------- */
+/* !7 - ARABIC */
+	.rtlVersion {
+		direction: rtl;
+	}
+
+/*---------------------------------------------- */

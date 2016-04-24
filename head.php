@@ -1,5 +1,5 @@
 <!doctype html>
-<!--?php if((isset($_SESSION["selIdioma"]) && $_SESSION["selIdioma"]==9) || (isset($idioma) && $idioma->get_ID()==9)) { ?-->
+
 <?php
 	switch ($node->get_IDIOMA()) {
 		case 4:
@@ -25,38 +25,14 @@
 	}
 ?>
 
-<?php if($node->get_IDIOMA()==9) { ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $currentLang; ?>" lang="<?php echo $currentLang; ?>" dir="<?php echo $currentDirection; ?>" xmlns:fb="http://ogp.me/ns/fb#" >
 <head>
-<style>
-/*
-    .alignara, p, a, div, h1, h2, h3, h4, h5, h6, span { text-align:right !important; }
-    #main_menu > li { float:right !important; }
-    #main_menu ul li ul li { width:100%; float:right !important; }
-    #boxInfoPdf .descarrega, #boxInfoVideo .descarrega { background-position:left !important; }
-    #main_menu .parent:hover .menugroupfather {
-        position: absolute;
-    }
-    #main_menu .parent:hover .menugroup {
-        right: 334px;
-        position: relative;
-    }
-    #texte ul, .text ul {   list-style-image: none !important; }
-*/
-    
-</style>
-<?php 
-	} else { 
-		 ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" >
-<head>
-	<style>
-	    .alignara { }
-	</style>
-	<?php } ?>
 	
 	<?php include_once $_SESSION["PATH_WEB"].'/includes/metaTags.php'; ?>
 	<?php include_once $_SESSION["PATH_WEB"].'/includes/styles.php'; ?>
+	
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<?php include_once $_SESSION["PATH_WEB"].'/includes/scripts.php'; ?>
 	
 	<!-- FAVICONS -->
@@ -79,6 +55,14 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+	<script type="text/javascript">
+	    window.cookieconsent_options = {"message":"<?php echo $txt_AvisoCookies;?>","dismiss":"<?php echo $txt_AcceptoCookies; ?>","learnMore":"<?php echo $txt_llegirmes; ?>","link":"http://imuntanya.com/<?php echo $txt_TerminosUso; ?>","theme":"dark-bottom"};
+	</script>
+	
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+	<!-- End Cookie Consent plugin -->
 
 </head>
 <body <?php if ($bodyOnLoad!=""){?>onload="<?php echo $bodyOnLoad;?>"<?php }?> <?php if($node->get_IDIOMA()==9) { echo ('class="rtlVersion"'); } ?> >
@@ -92,10 +76,13 @@
 		
 		<ul class="idiomes">
 		   <?php for ($indice = 1; $indice < $idiomes->count(); $indice++){ $idioma = $idiomes->offsetGet($indice); ?>
-            <?php //if($idioma->get_ID()!=9) { ?>
+            <?php if($idioma->get_ID()!=9) { ?>
 			   <li <?php if ($node->get_IDIOMA() == $idioma->get_ID()){ echo "class='current'";}?>><a title="<?php echo $idioma->get_TEXT();?>" href="/index.php?task=idioma&idioma=<?php echo $idioma->get_ID();?>"><?php echo (substr($idioma->get_TEXT(), 0, 2)) ;?></a></li>	   
-            <?php  //} ?>  		
-		   <?php  }?>  		
+            <?php  }  else {?>  
+             <li <?php if ($node->get_IDIOMA() == $idioma->get_ID()){ echo "class='current'";}?>><a title="<?php echo $idioma->get_TEXT();?>" href="/index.php?task=idioma&idioma=<?php echo $idioma->get_ID();?>">عربي</a></li>		
+		   <?php }
+			    }
+			   ?>  		
 		</ul><!-- Final IDIOMES -->
 		
 		<div class="coordenades">

@@ -1,7 +1,7 @@
 <div id="boxInfoPdf">
   <h2><?php echo $txt_Descarregarinformacio;?> </h2>
           <?php for ($i = 1; $i < $adjuntoDescargasPdf->count(); $i++) { $a = $adjuntoDescargasPdf->offsetGet($i);?> 
-             <a target="_blank" title="<?php echo $a->get_NOM();?>" href="javascript:mostrar();" ><div class="descarrega"><?php echo $a->get_NOM();?></div></a>
+             <a target="_blank" title="<?php echo $a->get_NOM();?>" href="javascript:mostrar();" ><div class="descarrega"><?php echo utf8_decode($a->get_NOM());?></div></a>
           <?php }?>
         <div id="flotante" style="display:none;">  
         <form id="formSendPdf" onSubmit="return acceptarEmailSolInfo(<?php echo $_SESSION["idIdioma"]; ?>);" action="/index.php?id=<?php echo $contingutSeleccionat->get_URLSEMANTICA(); ?>&amp;task=envioEmailPdf" method="post" name="formSendPdf">
